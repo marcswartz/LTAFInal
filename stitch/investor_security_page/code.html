@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Investor Security | Woodfield Developments</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#131c25",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#bec7d3",
+              "primary-container": "#1c252e",
+              "tertiary-container": "#132637",
+              "background": "#faf9f8",
+              "on-primary-container": "#838c97",
+              "outline-variant": "#c4c6cb",
+              "surface-dim": "#dadad9",
+              "primary": "#071018",
+              "on-error": "#ffffff",
+              "surface": "#faf9f8",
+              "surface-container-low": "#f4f3f2",
+              "surface-container-high": "#e9e8e7",
+              "on-secondary-fixed-variant": "#594325",
+              "surface-container": "#eeeeed",
+              "on-tertiary-fixed": "#091d2e",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e3e2e1",
+              "secondary-container": "#fddab2",
+              "secondary-fixed": "#ffddb6",
+              "on-surface-variant": "#44474b",
+              "surface-bright": "#faf9f8",
+              "on-tertiary-container": "#7b8da2",
+              "surface-tint": "#565f6a",
+              "on-primary-fixed-variant": "#3f4852",
+              "tertiary": "#001020",
+              "on-tertiary-fixed-variant": "#36485b",
+              "outline": "#75777c",
+              "inverse-on-surface": "#f1f0f0",
+              "surface-variant": "#e3e2e1",
+              "inverse-surface": "#2f3130",
+              "on-background": "#1a1c1c",
+              "on-secondary-container": "#785e3e",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#d1e4fb",
+              "on-surface": "#1a1c1c",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#b5c8df",
+              "secondary": "#735a3a",
+              "inverse-primary": "#bec7d3",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#dae3f0",
+              "on-secondary-fixed": "#291801",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#e2c19b"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(250, 249, 248, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 border-r-0 bg-[#faf9f8] dark:bg-[#071018] flex flex-col py-8 z-50">
+<div class="px-8 mb-12">
+<h1 class="font-serif text-2xl font-bold tracking-tighter text-[#071018] dark:text-[#faf9f8]">Woodfield</h1>
+<p class="font-serif text-sm tracking-tight uppercase font-medium text-slate-500">Private Ledger</p>
+</div>
+<nav class="flex-1">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white hover:bg-[#f4f3f2] dark:hover:bg-[#1c252e] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white hover:bg-[#f4f3f2] dark:hover:bg-[#1c252e] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined">business_center</span>
+                        Deal Flow
+                    </a>
+</li>
+<li>
+<!-- Active State: Security Page -->
+<a class="flex items-center gap-4 px-8 py-4 text-[#071018] dark:text-white font-bold bg-[#f4f3f2] dark:bg-[#1c252e] border-l-4 border-[#071018] dark:border-[#fddab2] font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+                        Security
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white hover:bg-[#f4f3f2] dark:hover:bg-[#1c252e] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                        Reporting
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white hover:bg-[#f4f3f2] dark:hover:bg-[#1c252e] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined">admin_panel_settings</span>
+                        Admin
+                    </a>
+</li>
+</ul>
+</nav>
+<div class="px-8 mt-auto">
+<button class="w-full bg-primary text-on-primary py-4 px-6 text-xs font-bold tracking-widest uppercase hover:opacity-90 transition-opacity">
+                New Investment
+            </button>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 w-full h-20 bg-[#faf9f8]/80 dark:bg-[#071018]/80 backdrop-blur-xl border-b border-slate-200/20 dark:border-white/5 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-full px-12 ml-72">
+<div class="flex items-center gap-4">
+<span class="font-serif text-lg font-black text-[#071018] dark:text-[#faf9f8]">Investor Portal</span>
+<div class="h-4 w-px bg-outline-variant/30 mx-2"></div>
+<span class="font-sans text-xs tracking-widest uppercase text-slate-400">Security &amp; Protection</span>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">notifications</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">settings</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">logout</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional headshot of a middle-aged male executive with a confident expression in a sunlit modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWgPyqsmbdwHgJfopNPtt2yBa4W85yC_uTrvQOIUgSTQ1KyRWqo4HLkGlDB4UqSpl5Xe5csNTFRL9Pf_7IAI1yDVJQAZVZgFOqUaz6fuxfveGGUXqgUj0eE6YgA9prW58dwkf4sDb2ymkHHsV6mHgSvY3SDMyjbhSYsZZF4EruL1GhFnZPr6yCh_crZ0wUZx9FjpVxfhzv6Jb3YKKhjxETx9fxdmtQbVl3D0gzS7GXI0ty-Xzu0wyWrGF9eHyNL2oB7nSeEaYE_Eo"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-72 p-12 lg:p-20 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-24">
+<div class="flex flex-col lg:flex-row gap-12 lg:items-end">
+<div class="flex-1">
+<h2 class="font-headline text-5xl lg:text-6xl font-black text-primary leading-tight -tracking-[0.02em] mb-8">
+                        The Architectural <br/>Integrity of Capital.
+                    </h2>
+<p class="text-lg text-on-surface-variant font-light max-w-2xl leading-relaxed">
+                        Security at Woodfield Developments is not a feature; it is the foundation. We employ a multi-layered legal and financial structure designed to ensure your capital is secured against tangible assets with senior priority.
+                    </p>
+</div>
+<div class="hidden lg:block w-px h-32 bg-outline-variant/30 mb-4"></div>
+<div class="lg:w-1/3">
+<div class="p-8 bg-surface-container-low border-l-2 border-secondary">
+<span class="font-label text-xs font-bold tracking-[0.2em] uppercase text-secondary block mb-4">Core Philosophy</span>
+<p class="text-sm font-medium leading-relaxed italic">
+                            "We manage investor capital with the same institutional rigor as a Tier-1 lender, prioritizing return of capital over return on capital."
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Capital Flow Visual Workflow -->
+<section class="mb-32">
+<h3 class="font-headline text-3xl font-bold mb-12">Security Workflow</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+<!-- Connector Line (Desktop) -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-outline-variant/20 -translate-y-1/2 z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 p-8 bg-surface-container-lowest border border-outline-variant/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-primary text-white flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="font-label text-xs font-black text-secondary tracking-widest uppercase mb-2 block">Step 01</span>
+<h4 class="font-headline text-lg font-bold mb-4">Investor Contribution</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Capital is transferred via secure wire to a dedicated Woodfield Trust Account.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 p-8 bg-surface-container-lowest border border-outline-variant/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-primary text-white flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<span class="font-label text-xs font-black text-secondary tracking-widest uppercase mb-2 block">Step 02</span>
+<h4 class="font-headline text-lg font-bold mb-4">Trust Account Hold</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Funds are held by third-party legal counsel until all security documentation is registered.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 p-8 bg-surface-container-lowest border border-outline-variant/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-primary text-white flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">description</span>
+</div>
+<span class="font-label text-xs font-black text-secondary tracking-widest uppercase mb-2 block">Step 03</span>
+<h4 class="font-headline text-lg font-bold mb-4">Mortgage on Title</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">A legal charge is registered against the physical property title in favor of the investor.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 p-8 bg-surface-container-lowest border border-outline-variant/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-primary text-white flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">account_tree</span>
+</div>
+<span class="font-label text-xs font-black text-secondary tracking-widest uppercase mb-2 block">Step 04</span>
+<h4 class="font-headline text-lg font-bold mb-4">Disbursement</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Funds are released solely for development milestones verified by independent cost consultants.</p>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Priority & Documentation -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32">
+<!-- 1st Mortgage Priority -->
+<div class="lg:col-span-7 bg-primary text-white p-12 flex flex-col justify-between">
+<div>
+<span class="font-label text-xs font-bold tracking-[0.3em] uppercase text-secondary-container mb-6 block">Senior Position</span>
+<h3 class="font-headline text-4xl font-black mb-8 leading-tight">1st Mortgage Priority Status</h3>
+<p class="text-on-primary-container text-lg leading-relaxed mb-12">
+                        Investors hold a senior secured position. In the financial hierarchy, your claim is satisfied before any developer equity or subordinate debt. This "First-In, First-Out" structure provides the highest level of protection available in private real estate lending.
+                    </p>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex-1 h-px bg-white/10"></div>
+<span class="material-symbols-outlined text-secondary-container text-4xl">verified</span>
+</div>
+</div>
+<!-- Documentation List -->
+<div class="lg:col-span-5 bg-surface-container-low p-12">
+<h3 class="font-headline text-2xl font-bold mb-8">Verification Assets</h3>
+<p class="text-sm text-on-surface-variant mb-10 leading-relaxed">Every investment is accompanied by a full transparency package, accessible 24/7 through your portal.</p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4 p-4 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-secondary mt-1">article</span>
+<div>
+<span class="font-bold block text-sm">Certificate of Investment</span>
+<span class="text-xs text-on-surface-variant">Formal validation of principal and interest terms.</span>
+</div>
+</li>
+<li class="flex items-start gap-4 p-4 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-secondary mt-1">gavel</span>
+<div>
+<span class="font-bold block text-sm">Registered Mortgage Charge</span>
+<span class="text-xs text-on-surface-variant">Legal proof of title lien registered by counsel.</span>
+</div>
+</li>
+<li class="flex items-start gap-4 p-4 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-secondary mt-1">analytics</span>
+<div>
+<span class="font-bold block text-sm">Independent Appraisal</span>
+<span class="text-xs text-on-surface-variant">Current market valuation by a certified AACI appraiser.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Reporting & Default Scenario -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
+<div>
+<h3 class="font-headline text-3xl font-black mb-8">Reporting Lifecycle</h3>
+<div class="space-y-12">
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full border border-secondary flex items-center justify-center text-[10px] font-bold">M</div>
+<h4 class="font-bold mb-2">Monthly Status Updates</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Direct communication regarding construction progress, site photos, and municipal approval status.</p>
+</div>
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full border border-secondary flex items-center justify-center text-[10px] font-bold">Q</div>
+<h4 class="font-bold mb-2">Quarterly Financial Reviews</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Comprehensive audit of project budgets, variance reports, and market condition assessments.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high/50 p-12 border border-outline-variant/20">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-error" data-weight="fill">warning</span>
+<h3 class="font-headline text-2xl font-bold">The Default Protocol</h3>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                    While rare, we maintain a clear "Power of Sale" process to protect investor principal. If a default occurs, the legal charge allows for the immediate takeover of the property.
+                </p>
+<div class="bg-white p-6 space-y-4">
+<div class="flex justify-between items-center text-xs font-bold border-b border-outline-variant/10 pb-2">
+<span>Action</span>
+<span class="text-secondary">Timeline</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span>Notice of Sale Issued</span>
+<span class="font-medium">Day 15</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span>Redemption Period Ends</span>
+<span class="font-medium">Day 50</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span>Liquidation / Sale of Asset</span>
+<span class="font-medium">Day 60+</span>
+</div>
+</div>
+<p class="mt-8 text-[11px] text-on-surface-variant/70 italic uppercase tracking-wider">
+                    Proceeds are distributed to 1st mortgage holders before all other parties.
+                </p>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="relative h-96 overflow-hidden flex items-center px-12 lg:px-20 group">
+<div class="absolute inset-0 z-0">
+<img alt="Modern Architecture Detail" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" data-alt="extreme close-up of a high-end architectural building facade with clean lines and premium stone textures in soft evening light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn9l00Z1C3JN8nUDG_0V9I840ljRb2n6L2EJUyqj1hCUpVJUyfmuUitQliPL500edPwYUdZyYwQMdOiZ465R2AetFF0PyLQTcJfX0KIXPIpca6Tacj_VgxCaf-adhmW6dUKfcwZX3Du7z6Sre3paJe9QPMiouTnRPwOELvdUjxJxm7lkRsYQSlh3Kqo1Y-O7W9HDuXIYrsLpnY63J_Zb2Z2QPqy7TsLZCtG8tWxcAcx_7R9kmhvidCi-LE7ix3ITUdIxMf85cBv4c"/>
+<div class="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-headline text-4xl font-bold text-white mb-6">Institutional security for the private individual.</h2>
+<p class="text-on-primary-container text-lg mb-8">Review our current secured offerings and technical prospectus.</p>
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 text-sm font-black tracking-widest uppercase hover:bg-white transition-colors">
+                    Download Security Whitepaper
+                </button>
+</div>
+</section>
+</main>
+<!-- Simple Footer -->
+<footer class="ml-72 py-12 px-12 lg:px-20 border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="flex items-center gap-4">
+<span class="font-serif text-lg font-black text-primary">Woodfield</span>
+<span class="text-xs text-on-surface-variant/60 font-medium">© 2024 Woodfield Developments Ltd. All Rights Reserved.</span>
+</div>
+<div class="flex gap-8 text-[10px] font-bold tracking-[0.2em] uppercase text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Legal Disclosure</a>
+<a class="hover:text-primary transition-colors" href="#">Regulatory</a>
+</div>
+</div>
+</footer>
+</body></html>

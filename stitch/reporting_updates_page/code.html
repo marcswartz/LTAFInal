@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#131c25",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#bec7d3",
+              "primary-container": "#1c252e",
+              "tertiary-container": "#132637",
+              "background": "#faf9f8",
+              "on-primary-container": "#838c97",
+              "outline-variant": "#c4c6cb",
+              "surface-dim": "#dadad9",
+              "primary": "#071018",
+              "on-error": "#ffffff",
+              "surface": "#faf9f8",
+              "surface-container-low": "#f4f3f2",
+              "surface-container-high": "#e9e8e7",
+              "on-secondary-fixed-variant": "#594325",
+              "surface-container": "#eeeeed",
+              "on-tertiary-fixed": "#091d2e",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e3e2e1",
+              "secondary-container": "#fddab2",
+              "secondary-fixed": "#ffddb6",
+              "on-surface-variant": "#44474b",
+              "surface-bright": "#faf9f8",
+              "on-tertiary-container": "#7b8da2",
+              "surface-tint": "#565f6a",
+              "on-primary-fixed-variant": "#3f4852",
+              "tertiary": "#001020",
+              "on-tertiary-fixed-variant": "#36485b",
+              "outline": "#75777c",
+              "inverse-on-surface": "#f1f0f0",
+              "surface-variant": "#e3e2e1",
+              "inverse-surface": "#2f3130",
+              "on-background": "#1a1c1c",
+              "on-secondary-container": "#785e3e",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#d1e4fb",
+              "on-surface": "#1a1c1c",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#b5c8df",
+              "secondary": "#735a3a",
+              "inverse-primary": "#bec7d3",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#dae3f0",
+              "on-secondary-fixed": "#291801",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#e2c19b"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .soul-gradient {
+            background: linear-gradient(135deg, #071018 0%, #1c252e 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 border-r-0 bg-[#faf9f8] dark:bg-[#071018] flex flex-col py-8 z-50">
+<div class="px-8 mb-12">
+<h1 class="font-serif text-2xl font-bold tracking-tighter text-[#071018] dark:text-[#faf9f8]">Woodfield</h1>
+<p class="font-serif text-sm tracking-tight uppercase font-medium text-slate-500">Private Ledger</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white hover:bg-[#f4f3f2] dark:hover:bg-[#1c252e] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined mr-4">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center px-6 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white hover:bg-[#f4f3f2] dark:hover:bg-[#1c252e] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined mr-4">business_center</span>
+                Deal Flow
+            </a>
+<a class="flex items-center px-6 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white hover:bg-[#f4f3f2] dark:hover:bg-[#1c252e] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined mr-4">verified_user</span>
+                Security
+            </a>
+<a class="flex items-center px-6 py-4 text-[#071018] dark:text-white font-bold bg-[#f4f3f2] dark:bg-[#1c252e] border-l-4 border-[#071018] dark:border-[#fddab2] font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined mr-4">analytics</span>
+                Reporting
+            </a>
+<a class="flex items-center px-6 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white hover:bg-[#f4f3f2] dark:hover:bg-[#1c252e] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined mr-4">admin_panel_settings</span>
+                Admin
+            </a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary text-on-primary py-4 text-xs tracking-widest uppercase font-bold hover:opacity-90 transition-opacity">
+                New Investment
+            </button>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 w-full h-20 bg-[#faf9f8]/80 backdrop-blur-xl border-b border-slate-200/20 flex justify-between items-center px-12 ml-72" style="width: calc(100% - 18rem);">
+<div class="flex items-center gap-8">
+<h2 class="font-serif text-lg font-black text-[#071018]">Investor Portal</h2>
+<div class="relative hidden lg:block w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-sans text-[10px] tracking-widest uppercase pl-10 placeholder:text-slate-300" placeholder="SEARCH ASSETS..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 border-r border-slate-200 pr-6">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[10px] font-bold tracking-widest uppercase text-right leading-none">
+                    M. Woodfield<br/>
+<span class="text-slate-400 font-normal">Principal</span>
+</span>
+<div class="w-10 h-10 bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional man in a tailored dark suit with a focused expression against a neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0ruEbdcCQtnVOhCzkAAmQdwhdYyP9AS3Sf2utI_E10_mlwPQ02f42pqpG0i5LJcz1O-MqXzRSkPWtEKoo0i9KfvZDZ3IcVMsB2NRk0GKZz4MNsdGWnehIG0NO6j2LjWvGG6KuxQhnJZYlfGJb-s0RhLpco7hSS5YY7XkIciRHa6CTZ41VyQmhRx1_cabH9n26hyDVo-1cfHIV6nMRgnAy4b9qJIFlcr5IJJqlavo6-xvboqS_vf32HNKJdITqlt-_xxCoBtkITS0"/>
+</div>
+<button class="text-slate-400 hover:text-error transition-colors">
+<span class="material-symbols-outlined">logout</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-72 p-12 bg-surface min-h-screen">
+<!-- Header Section -->
+<header class="mb-20">
+<div class="flex justify-between items-end">
+<div class="max-w-2xl">
+<span class="text-secondary font-bold tracking-[0.2em] text-[10px] uppercase block mb-4">Quarterly Performance &amp; Updates</span>
+<h1 class="font-serif text-5xl font-black tracking-tighter text-primary mb-6">Investment Reporting</h1>
+<p class="text-on-surface-variant font-medium leading-relaxed max-w-lg">
+                        Real-time transparency for Woodfield Development partners. Review your distribution history, project milestones, and executive insights.
+                    </p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 border border-outline-variant/30 text-[10px] font-bold tracking-widest uppercase flex items-center gap-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Export Statement
+                    </button>
+<button class="px-6 py-3 bg-primary text-on-primary text-[10px] font-bold tracking-widest uppercase flex items-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm">mail</span>
+                        Contact Advisor
+                    </button>
+</div>
+</div>
+</header>
+<!-- Bento Grid Stats -->
+<div class="grid grid-cols-12 gap-8 mb-20">
+<div class="col-span-12 lg:col-span-4 bg-surface-container-lowest p-8 border-l-2 border-secondary group hover:bg-surface-container-low transition-colors duration-300">
+<p class="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2">Portfolio Value</p>
+<h3 class="font-serif text-4xl font-black text-primary">$4,820,000.00</h3>
+<div class="mt-8 flex items-center gap-2 text-green-700">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-xs font-bold uppercase tracking-wider">+12.4% vs Last Quarter</span>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 bg-surface-container-lowest p-8 border-l-2 border-primary-container">
+<p class="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2">Next Distribution</p>
+<div class="flex items-baseline gap-4">
+<h3 class="font-serif text-4xl font-black text-primary">Dec 01</h3>
+<span class="text-secondary font-bold uppercase text-[10px] tracking-widest">Confirmed</span>
+</div>
+<div class="mt-8">
+<div class="w-full bg-surface-container-high h-1 mb-2">
+<div class="bg-secondary h-full w-[85%]"></div>
+</div>
+<p class="text-[10px] text-slate-400 uppercase font-medium">9 Days Remaining</p>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 bg-primary p-8 flex flex-col justify-between">
+<div>
+<p class="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2">Quick Access</p>
+<h4 class="text-on-primary font-serif text-xl">Monthly Performance Report</h4>
+</div>
+<a class="mt-6 flex items-center justify-between text-secondary-container hover:text-white transition-colors" href="#">
+<span class="text-[10px] font-bold tracking-widest uppercase">Download PDF (2.4MB)</span>
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</a>
+</div>
+</div>
+<!-- Distribution & Charts Section -->
+<section class="grid grid-cols-12 gap-12 mb-20">
+<div class="col-span-12 lg:col-span-8">
+<div class="flex justify-between items-center mb-10">
+<h3 class="font-serif text-2xl font-bold">Distribution History</h3>
+<div class="flex gap-4">
+<button class="text-[10px] font-bold tracking-widest uppercase text-primary border-b-2 border-primary pb-1">Table</button>
+<button class="text-[10px] font-bold tracking-widest uppercase text-slate-400 hover:text-primary pb-1">Chart</button>
+</div>
+</div>
+<div class="bg-surface-container-low overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/20">
+<th class="px-8 py-6 text-[10px] font-bold tracking-widest uppercase text-slate-400">Date</th>
+<th class="px-8 py-6 text-[10px] font-bold tracking-widest uppercase text-slate-400">Description</th>
+<th class="px-8 py-6 text-[10px] font-bold tracking-widest uppercase text-slate-400">Yield</th>
+<th class="px-8 py-6 text-[10px] font-bold tracking-widest uppercase text-slate-400 text-right">Amount</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-highest transition-colors">
+<td class="px-8 py-5 text-xs font-bold text-primary">Nov 01, 2023</td>
+<td class="px-8 py-5 text-xs text-on-surface-variant">Monthly Dividend - Equity Portfolio</td>
+<td class="px-8 py-5 text-xs font-medium text-slate-600">8.2%</td>
+<td class="px-8 py-5 text-xs font-bold text-primary text-right">$32,500.00</td>
+</tr>
+<tr class="hover:bg-surface-container-highest transition-colors">
+<td class="px-8 py-5 text-xs font-bold text-primary">Oct 01, 2023</td>
+<td class="px-8 py-5 text-xs text-on-surface-variant">Monthly Dividend - Equity Portfolio</td>
+<td class="px-8 py-5 text-xs font-medium text-slate-600">8.1%</td>
+<td class="px-8 py-5 text-xs font-bold text-primary text-right">$32,100.00</td>
+</tr>
+<tr class="hover:bg-surface-container-highest transition-colors">
+<td class="px-8 py-5 text-xs font-bold text-primary">Sep 01, 2023</td>
+<td class="px-8 py-5 text-xs text-on-surface-variant">Monthly Dividend - Equity Portfolio</td>
+<td class="px-8 py-5 text-xs font-medium text-slate-600">8.3%</td>
+<td class="px-8 py-5 text-xs font-bold text-primary text-right">$32,850.00</td>
+</tr>
+<tr class="hover:bg-surface-container-highest transition-colors">
+<td class="px-8 py-5 text-xs font-bold text-primary">Aug 01, 2023</td>
+<td class="px-8 py-5 text-xs text-on-surface-variant">Monthly Dividend - Equity Portfolio</td>
+<td class="px-8 py-5 text-xs font-medium text-slate-600">7.9%</td>
+<td class="px-8 py-5 text-xs font-bold text-primary text-right">$31,200.00</td>
+</tr>
+<tr class="hover:bg-surface-container-highest transition-colors">
+<td class="px-8 py-5 text-xs font-bold text-primary">Jul 01, 2023</td>
+<td class="px-8 py-5 text-xs text-on-surface-variant">Monthly Dividend - Equity Portfolio</td>
+<td class="px-8 py-5 text-xs font-medium text-slate-600">8.0%</td>
+<td class="px-8 py-5 text-xs font-bold text-primary text-right">$31,800.00</td>
+</tr>
+<tr class="hover:bg-surface-container-highest transition-colors">
+<td class="px-8 py-5 text-xs font-bold text-primary">Jun 01, 2023</td>
+<td class="px-8 py-5 text-xs text-on-surface-variant">Monthly Dividend - Equity Portfolio</td>
+<td class="px-8 py-5 text-xs font-medium text-slate-600">8.2%</td>
+<td class="px-8 py-5 text-xs font-bold text-primary text-right">$32,450.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4">
+<div class="bg-surface-container-lowest p-8 h-full border border-outline-variant/20 flex flex-col">
+<h3 class="font-serif text-xl font-bold mb-8">Yield Performance</h3>
+<div class="flex-1 flex flex-col justify-end">
+<div class="flex items-end gap-3 h-48 mb-6">
+<div class="flex-1 bg-surface-container-high h-[60%] hover:bg-secondary transition-colors group relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[8px] font-bold opacity-0 group-hover:opacity-100 uppercase">Jun</span>
+</div>
+<div class="flex-1 bg-surface-container-high h-[75%] hover:bg-secondary transition-colors group relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[8px] font-bold opacity-0 group-hover:opacity-100 uppercase">Jul</span>
+</div>
+<div class="flex-1 bg-surface-container-high h-[68%] hover:bg-secondary transition-colors group relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[8px] font-bold opacity-0 group-hover:opacity-100 uppercase">Aug</span>
+</div>
+<div class="flex-1 bg-surface-container-high h-[82%] hover:bg-secondary transition-colors group relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[8px] font-bold opacity-0 group-hover:opacity-100 uppercase">Sep</span>
+</div>
+<div class="flex-1 bg-surface-container-high h-[85%] hover:bg-secondary transition-colors group relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[8px] font-bold opacity-0 group-hover:opacity-100 uppercase">Oct</span>
+</div>
+<div class="flex-1 bg-secondary h-[90%] group relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[8px] font-bold opacity-100 uppercase">Nov</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-[10px] uppercase font-bold text-slate-400">Current Yield</span>
+<span class="text-xs font-bold">8.24% p.a.</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-[10px] uppercase font-bold text-slate-400">Capital At Risk</span>
+<span class="text-xs font-bold">$12.4M</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[10px] uppercase font-bold text-slate-400">Loan To Value</span>
+<span class="text-xs font-bold">64%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Updates Section -->
+<section class="mb-20">
+<h3 class="font-serif text-3xl font-black mb-12">Project Milestones</h3>
+<div class="grid grid-cols-12 gap-10">
+<!-- Main Update Card -->
+<div class="col-span-12 lg:col-span-7 space-y-8">
+<div class="group overflow-hidden bg-surface-container-lowest">
+<div class="h-96 overflow-hidden relative">
+<img alt="Construction Site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="high-angle wide shot of a large modern apartment complex construction site with yellow cranes and steel framing under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6KPDbX5Pq6oNlxB1S_dZqGm9Q20JEKV4tRmXUTsNJlHpRFhXXkx2s_ju_UwXdcr6Ax1LdEUrIUxPcyEueNRiyhQc86sJ_R-JweyJj8dYj-UWr60MCuWD-gCLsahYgutA_KVF3Zxpl0EuHv_l_O_DGfH92QUEieoSNQHqftgjwRf7znGxylq7yUowl2PpnBBvUx-Hk2Y8hgE53PH6xEVBM7BN3JY84Jqw_rEoxrVpqkxiMjMjU75hOXCIvr5n0cjMy05KhxsLT8NI"/>
+<div class="absolute top-6 left-6 bg-primary text-on-primary px-4 py-2 text-[10px] font-bold tracking-[0.2em] uppercase">Site Update: Nov 15</div>
+</div>
+<div class="p-10">
+<h4 class="font-serif text-2xl font-bold mb-4">Phase II Vertical Progress: The Heights at Meridian</h4>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                                We have successfully completed the structural framing for buildings A and B. Electrical and plumbing rough-ins are now 45% complete. Supply chain delays noted last month have been resolved with alternative sourcing for HVAC units, keeping us on track for a Summer 2024 opening.
+                            </p>
+<div class="grid grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-4 text-center">
+<span class="block text-xl font-serif font-bold">88%</span>
+<span class="text-[8px] font-bold uppercase tracking-widest text-slate-400">Structure</span>
+</div>
+<div class="bg-surface-container-low p-4 text-center">
+<span class="block text-xl font-serif font-bold">42%</span>
+<span class="text-[8px] font-bold uppercase tracking-widest text-slate-400">Interior</span>
+</div>
+<div class="bg-surface-container-low p-4 text-center">
+<span class="block text-xl font-serif font-bold">95%</span>
+<span class="text-[8px] font-bold uppercase tracking-widest text-slate-400">Permitting</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Founders Notes & Sidebar Updates -->
+<div class="col-span-12 lg:col-span-5 space-y-10">
+<div class="bg-secondary-container/30 p-10 border border-secondary/10 relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-secondary/30 text-5xl">format_quote</span>
+<h5 class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-6">Founder's Note</h5>
+<p class="font-serif italic text-lg text-primary mb-8 leading-relaxed">
+                            "The resilience of the local sub-market remains our strongest tailwind. While interest rates create macro noise, our fixed-debt strategy and localized demand for high-end residential units continue to drive value exactly as projected."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-slate-300 rounded-full overflow-hidden">
+<img alt="Founder" class="w-full h-full object-cover" data-alt="professional portrait of an executive man in his 50s with grey hair, wearing a white shirt and confident smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFMDZ8nCP0W1Bm6QsgiC6kF6fjeSLLBKe4vsMiQhor3yNbd8lfyq_eGpf44C9OztLt5FPydu8ihTVn2XcCNvNjDnYnseL3NIW4wPskH7yPYK1v7E771ipJcEX0wuDVWogc2UGtPbNiNvodzBUHsEKpfPiHZNVe7-wxLIqlEdPBKJZCOWSLJO_ZkHIdLCfIRHpVItymCM_EZYQysFGZ_4dQenFCEuLIVnwOmNz6mrl3CAxtthffE3tILqaR5tKnsyUq-y9ok29tt24"/>
+</div>
+<div>
+<p class="text-[10px] font-bold tracking-widest uppercase">Marcus Woodfield</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Managing Director</p>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="text-[10px] font-bold tracking-widest uppercase text-slate-400">Previous Project Updates</h5>
+<a class="group flex gap-6 items-center border-b border-outline-variant/10 pb-6 hover:translate-x-2 transition-transform" href="#">
+<div class="w-20 h-20 flex-shrink-0">
+<img alt="Past Update" class="w-full h-full object-cover" data-alt="close-up of architectural blueprints and a hard hat on a wooden table in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWIbbPZ9saTWohltMWQYDj5UI_nwmjfTTzTNsd-5pRjdmL20lr9llPkYpa896iUPNT0t2Qi6w7jheqUVeHGpcx_B2o0J7puDxxi-COIMMikSNnkLYg7O73Sd0sLoatn4X-Vh9QEXrGSUBrDw_a5OLXSboX63iflzrDHS2Y5juszxmadzcSjfReqdKApPohyGdyU6IukBa6RnLBtZcyuTziyOp4nVnP5yWO5TlGKCIHsI49c1YtCXDzELjh68qBv-8n9Ob33pKSnIk"/>
+</div>
+<div>
+<p class="text-[8px] font-bold uppercase text-secondary tracking-widest mb-1">Oct 20, 2023</p>
+<h6 class="text-sm font-bold group-hover:text-secondary transition-colors">Foundation Pour &amp; Utility Grid Integration</h6>
+</div>
+</a>
+<a class="group flex gap-6 items-center border-b border-outline-variant/10 pb-6 hover:translate-x-2 transition-transform" href="#">
+<div class="w-20 h-20 flex-shrink-0">
+<img alt="Past Update" class="w-full h-full object-cover" data-alt="modern glass facade of an office building reflecting a blue sky with soft white clouds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeugxuNfWZkdow_v-KUYeCwUyEcRkUnaXj3q8RbYexHXhjCojuUHrEMOEob6OQi2zPHKFEKcoWz9Pp3te7e1KcaJFUEKF-L111lPLPEbQ3fommG1XMFgTBueAVTr94WZzVdbBUk7OwCoSvn697TTVQDmm5xotqrhIxcmGKToXa8MQkIIvE5xRMkE4YfC_nbvZ9B-FsAyp_Fm-4bq5LMsEuvd3jnPtZCxah6FUuPM2YVkOgx3r3X5xyKjRhyFEc4ZuTQFytnneryGo"/>
+</div>
+<div>
+<p class="text-[8px] font-bold uppercase text-secondary tracking-widest mb-1">Sep 15, 2023</p>
+<h6 class="text-sm font-bold group-hover:text-secondary transition-colors">Capital Allocation &amp; Vendor Contract Finalization</h6>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Documentation Section -->
+<section class="mt-32 pt-12 border-t border-outline-variant/20">
+<div class="flex flex-col lg:flex-row justify-between gap-12">
+<div class="max-w-xs">
+<h1 class="font-serif text-2xl font-black text-primary mb-4">Woodfield</h1>
+<p class="text-[10px] font-medium text-slate-400 leading-relaxed uppercase tracking-widest">
+                        Securing generational wealth through institutional-grade real estate developments. 
+                    </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12 flex-1">
+<div>
+<h6 class="text-[10px] font-bold tracking-widest uppercase mb-6">Resources</h6>
+<ul class="space-y-3">
+<li><a class="text-[10px] text-slate-500 hover:text-primary transition-colors uppercase tracking-widest" href="#">Annual Tax Form 1099</a></li>
+<li><a class="text-[10px] text-slate-500 hover:text-primary transition-colors uppercase tracking-widest" href="#">Offering Memorandum</a></li>
+<li><a class="text-[10px] text-slate-500 hover:text-primary transition-colors uppercase tracking-widest" href="#">Subscription Agreement</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-[10px] font-bold tracking-widest uppercase mb-6">Contact</h6>
+<ul class="space-y-3">
+<li><a class="text-[10px] text-slate-500 hover:text-primary transition-colors uppercase tracking-widest" href="#">Investor Relations</a></li>
+<li><a class="text-[10px] text-slate-500 hover:text-primary transition-colors uppercase tracking-widest" href="#">General Inquiries</a></li>
+<li><a class="text-[10px] text-slate-500 hover:text-primary transition-colors uppercase tracking-widest" href="#">Trust Department</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h6 class="text-[10px] font-bold tracking-widest uppercase mb-6">Office</h6>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest leading-loose">
+                            One Vanderbilt Avenue,<br/>
+                            Floor 54, New York, NY 10017<br/>
+                            T: +1 212 555 0198
+                        </p>
+</div>
+</div>
+</div>
+<div class="mt-20 pb-12 flex justify-between items-center text-[8px] font-bold text-slate-300 uppercase tracking-[0.3em]">
+<p>© 2024 Woodfield Developments LLC. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Investor Portal | Woodfield Developments</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#131c25",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#bec7d3",
+              "primary-container": "#1c252e",
+              "tertiary-container": "#132637",
+              "background": "#faf9f8",
+              "on-primary-container": "#838c97",
+              "outline-variant": "#c4c6cb",
+              "surface-dim": "#dadad9",
+              "primary": "#071018",
+              "on-error": "#ffffff",
+              "surface": "#faf9f8",
+              "surface-container-low": "#f4f3f2",
+              "surface-container-high": "#e9e8e7",
+              "on-secondary-fixed-variant": "#594325",
+              "surface-container": "#eeeeed",
+              "on-tertiary-fixed": "#091d2e",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e3e2e1",
+              "secondary-container": "#fddab2",
+              "secondary-fixed": "#ffddb6",
+              "on-surface-variant": "#44474b",
+              "surface-bright": "#faf9f8",
+              "on-tertiary-container": "#7b8da2",
+              "surface-tint": "#565f6a",
+              "on-primary-fixed-variant": "#3f4852",
+              "tertiary": "#001020",
+              "on-tertiary-fixed-variant": "#36485b",
+              "outline": "#75777c",
+              "inverse-on-surface": "#f1f0f0",
+              "surface-variant": "#e3e2e1",
+              "inverse-surface": "#2f3130",
+              "on-background": "#1a1c1c",
+              "on-secondary-container": "#785e3e",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#d1e4fb",
+              "on-surface": "#1a1c1c",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#b5c8df",
+              "secondary": "#735a3a",
+              "inverse-primary": "#bec7d3",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#dae3f0",
+              "on-secondary-fixed": "#291801",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#e2c19b"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soul-gradient {
+            background: linear-gradient(135deg, #071018 0%, #1c252e 100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container">
+<!-- SideNavBar (Shared Component) -->
+<aside class="h-screen w-72 fixed left-0 top-0 border-r-0 bg-[#faf9f8] dark:bg-[#071018] flex flex-col py-8 z-50">
+<div class="px-8 mb-12">
+<h1 class="font-serif text-2xl font-bold tracking-tighter text-[#071018] dark:text-[#faf9f8]">Woodfield</h1>
+<p class="font-sans text-xs tracking-widest uppercase text-on-primary-container mt-1">Private Ledger</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-4 text-[#071018] dark:text-white font-bold bg-[#f4f3f2] dark:bg-[#1c252e] border-l-4 border-[#071018] dark:border-[#fddab2] transition-all ease-out scale-98 hover:bg-[#f4f3f2]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="dashboard">dashboard</span>
+<span class="font-serif text-sm tracking-tight uppercase font-medium">Dashboard</span>
+</a>
+<a class="flex items-center text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white px-6 py-4 transition-colors duration-200 hover:bg-[#f4f3f2]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="business_center">business_center</span>
+<span class="font-serif text-sm tracking-tight uppercase font-medium">Deal Flow</span>
+</a>
+<a class="flex items-center text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white px-6 py-4 transition-colors duration-200 hover:bg-[#f4f3f2]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="verified_user">verified_user</span>
+<span class="font-serif text-sm tracking-tight uppercase font-medium">Security</span>
+</a>
+<a class="flex items-center text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white px-6 py-4 transition-colors duration-200 hover:bg-[#f4f3f2]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="analytics">analytics</span>
+<span class="font-serif text-sm tracking-tight uppercase font-medium">Reporting</span>
+</a>
+<a class="flex items-center text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white px-6 py-4 transition-colors duration-200 hover:bg-[#f4f3f2]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span class="font-serif text-sm tracking-tight uppercase font-medium">Admin</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full soul-gradient text-white py-4 font-label text-xs tracking-widest uppercase font-bold hover:opacity-90 transition-opacity">
+                New Investment
+            </button>
+</div>
+</aside>
+<!-- Main Content Shell -->
+<main class="ml-72 min-h-screen">
+<!-- TopAppBar (Shared Component) -->
+<header class="sticky top-0 z-40 w-full h-20 bg-[#faf9f8]/80 backdrop-blur-xl border-b border-slate-200/20 flex justify-between items-center px-12">
+<div class="flex items-center space-x-8">
+<span class="font-serif text-lg font-black text-[#071018]">Investor Portal</span>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs tracking-widest uppercase pl-10 w-64 placeholder:text-outline-variant" placeholder="Search Ledgers..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-4">
+<button class="text-slate-400 hover:text-[#071018] transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-slate-400 hover:text-[#071018] transition-opacity">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="text-slate-400 hover:text-[#071018] transition-opacity">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+</button>
+</div>
+<div class="h-8 w-8 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional headshot of a mature executive man in a dark charcoal suit against a clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TIIEB46r0lunlLbYBCEilINRR36PgTKpyA83sDaaR4eJbgCKEGF7EgTZjzyH65GAz-_YlF6N3A0o7Ii8uAjAJfoG9Aujp9Qmu7lodiND7TcMe9JS4EVcIwrAOjNikKw9jMpYkqzo6uOxKvolw3vj_8x0S50C8c1WbdiCXxMninO66uQsVEi3PBQHur5xSiMPDFOYqhEUynj1bVkrHoA9Am167ElmLHtTCuSOYJC1T7ZWAJ9dc70cdKb8vp4srC82YYgxzXQ-XUg"/>
+</div>
+</div>
+</header>
+<!-- Canvas Area -->
+<div class="px-12 py-12 space-y-12">
+<!-- Hero Stats: Asymmetric Monolith -->
+<section class="grid grid-cols-12 gap-8 items-end">
+<div class="col-span-12 lg:col-span-7">
+<span class="font-label text-xs tracking-widest uppercase text-secondary font-bold mb-4 block">Portfolio Overview</span>
+<h2 class="font-headline text-6xl font-black text-primary tracking-tighter leading-none">
+                        $4.2M <span class="text-outline-variant font-light">Capital Deployed</span>
+</h2>
+</div>
+<div class="col-span-12 lg:col-span-5 flex justify-end space-x-12 pb-2">
+<div class="text-right">
+<p class="font-label text-xs tracking-widest uppercase text-outline mb-1">Active Deals</p>
+<p class="font-headline text-3xl font-bold text-primary">03</p>
+</div>
+<div class="text-right">
+<p class="font-label text-xs tracking-widest uppercase text-outline mb-1">Expected Yield</p>
+<p class="font-headline text-3xl font-bold text-secondary">11.5%</p>
+</div>
+</div>
+</section>
+<!-- Alerts & Quick Actions: Bento Layout -->
+<section class="grid grid-cols-12 gap-6">
+<!-- Upcoming Repayments -->
+<div class="col-span-12 md:col-span-4 bg-surface-container-low p-8 border-l-2 border-secondary">
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-headline text-xl font-bold">Upcoming Liquidity</h3>
+<span class="material-symbols-outlined text-secondary" data-icon="event_upcoming">event_upcoming</span>
+</div>
+<ul class="space-y-6">
+<li class="flex justify-between items-center">
+<div>
+<p class="font-headline text-sm font-bold">Sept 15, 2024</p>
+<p class="font-body text-xs text-on-surface-variant">Oxford St. Development</p>
+</div>
+<p class="font-body text-sm font-semibold">$125,000</p>
+</li>
+<li class="flex justify-between items-center opacity-60">
+<div>
+<p class="font-headline text-sm font-bold">Oct 30, 2024</p>
+<p class="font-body text-xs text-on-surface-variant">Harbor Bridge Debt</p>
+</div>
+<p class="font-body text-sm font-semibold">$84,500</p>
+</li>
+</ul>
+</div>
+<!-- Material Alerts -->
+<div class="col-span-12 md:col-span-8 bg-surface-container-highest/30 p-8 flex flex-col justify-center">
+<div class="flex items-center space-x-4 mb-4">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-label text-xs tracking-widest uppercase font-bold text-error">Material Change Alert</span>
+</div>
+<div class="flex justify-between items-center group cursor-pointer">
+<div>
+<h4 class="font-headline text-2xl font-bold text-primary mb-2">Parkview Residences: Rezoning Approved</h4>
+<p class="font-body text-sm text-on-surface-variant max-w-xl leading-relaxed">The municipal council has granted full approval for Phase II expansion. Projected IRR has been adjusted upwards by 45bps.</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- Portfolio Composition & Details -->
+<section class="grid grid-cols-12 gap-12">
+<!-- Deal Cards -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-4">
+<h3 class="font-headline text-2xl font-bold">Active Portfolio</h3>
+<button class="font-label text-xs tracking-widest uppercase text-outline hover:text-primary transition-colors">View All Archive</button>
+</div>
+<!-- Deal Card 1 -->
+<div class="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex h-48">
+<div class="w-1/3 overflow-hidden">
+<img alt="Real Estate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="architectural shot of a modern glass skyscraper with sharp angles reflecting a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcZrCrw8JAAsqMv8rinK-LSx_ijHqAUNqD5pIZBL4aMQk-kMBIvJulQunClFvnPx4cxPm7YBr7qnt1A02iCCjH14DUbGrMBAbubwVKHheQ42k6zmPQE3APDkro6iiqp7uWW04gKb7Qcgrau95Ph33sRFqi_FjX_DpmyiQpHb5o61Yp6eNY0eoCfiRKoFLQ4u050uv5JaR8QCL-A4ByYRH_miD1zOxeyai5shppBNdbXtlX_LpCwQCed1cYug_neQf35x-T_h5fGss"/>
+</div>
+<div class="w-2/3 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center space-x-3 mb-1">
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label text-[10px] tracking-widest uppercase font-bold rounded-full">Funded</span>
+<span class="font-label text-[10px] tracking-widest uppercase text-outline font-bold">Mezzanine Debt</span>
+</div>
+<h4 class="font-headline text-xl font-bold">Oxford St. Development</h4>
+</div>
+<div class="text-right">
+<p class="font-body text-xs text-outline mb-1">Investment</p>
+<p class="font-headline text-lg font-bold text-primary">$1,200,000</p>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex space-x-8">
+<div>
+<p class="font-body text-[10px] text-outline uppercase tracking-wider">Target LTV</p>
+<p class="font-headline text-sm font-bold">65%</p>
+</div>
+<div>
+<p class="font-body text-[10px] text-outline uppercase tracking-wider">Maturity</p>
+<p class="font-headline text-sm font-bold">18 Months</p>
+</div>
+</div>
+<button class="font-label text-xs tracking-widest uppercase border-b border-primary/20 hover:border-primary pb-1 transition-all">Report</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Deal Card 2 -->
+<div class="group bg-surface-container-lowest p-1 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex h-48">
+<div class="w-1/3 overflow-hidden">
+<img alt="Luxury Apartments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="minimalist modern apartment complex with clean white lines and wooden accents during golden hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2QEaUey5VGOAdx3X7JllcMED1E1nMLuc_18_473LFV3pi_iJ9Z4dQuoH3wQYzW0nmXpgNa9JNTct5Ag1YBxl6-MKvkK6bgXhXF-zGPeGN8KfZU6X8UMOysAZyyV-rYcQ88t1pC_W_wEO97OxBvq_N_irxV4yuLxF5ykcRiXTAMtlyqMpEKp3MFUZd0i6QRWCkxP97FIwG7AOLrspri304rOVZuL-3TDR-7C4oJwN6SC6oGLGO7EYhSZdhPAQNkXBCM9eT7KHZT7M"/>
+</div>
+<div class="w-2/3 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center space-x-3 mb-1">
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label text-[10px] tracking-widest uppercase font-bold rounded-full">Funded</span>
+<span class="font-label text-[10px] tracking-widest uppercase text-outline font-bold">Direct Equity</span>
+</div>
+<h4 class="font-headline text-xl font-bold">Parkview Residences</h4>
+</div>
+<div class="text-right">
+<p class="font-body text-xs text-outline mb-1">Investment</p>
+<p class="font-headline text-lg font-bold text-primary">$2,500,000</p>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex space-x-8">
+<div>
+<p class="font-body text-[10px] text-outline uppercase tracking-wider">Projected IRR</p>
+<p class="font-headline text-sm font-bold">14.2%</p>
+</div>
+<div>
+<p class="font-body text-[10px] text-outline uppercase tracking-wider">Equity Multiplier</p>
+<p class="font-headline text-sm font-bold">1.8x</p>
+</div>
+</div>
+<button class="font-label text-xs tracking-widest uppercase border-b border-primary/20 hover:border-primary pb-1 transition-all">Report</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Analytics & Updates -->
+<aside class="col-span-12 lg:col-span-4 space-y-12">
+<!-- Portfolio Summary Chart (CSS Visualization) -->
+<div class="bg-surface p-8 border border-outline-variant/10">
+<h4 class="font-headline text-lg font-bold mb-8">Asset Allocation</h4>
+<div class="flex items-center justify-center relative py-8">
+<!-- Simple SVG Donut Chart for High-End Feel -->
+<svg class="w-48 h-48 transform -rotate-90">
+<circle cx="96" cy="96" fill="transparent" r="80" stroke="#eeeeed" stroke-width="12"></circle>
+<circle cx="96" cy="96" fill="transparent" r="80" stroke="#071018" stroke-dasharray="502" stroke-dashoffset="150" stroke-width="12"></circle>
+<circle cx="96" cy="96" fill="transparent" r="80" stroke="#735a3a" stroke-dasharray="502" stroke-dashoffset="400" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<p class="font-headline text-2xl font-bold">Diversified</p>
+<p class="font-label text-[10px] tracking-widest uppercase text-outline">Risk Profile</p>
+</div>
+</div>
+<div class="mt-8 space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="w-3 h-3 bg-primary"></span>
+<span class="font-body text-sm text-on-surface-variant">Residential Equity</span>
+</div>
+<span class="font-headline text-sm font-bold">60%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="w-3 h-3 bg-secondary"></span>
+<span class="font-body text-sm text-on-surface-variant">Commercial Debt</span>
+</div>
+<span class="font-headline text-sm font-bold">30%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="w-3 h-3 bg-surface-container-highest"></span>
+<span class="font-body text-sm text-on-surface-variant">Cash / Escrow</span>
+</div>
+<span class="font-headline text-sm font-bold">10%</span>
+</div>
+</div>
+</div>
+<!-- Recent Updates -->
+<div class="space-y-6">
+<h4 class="font-headline text-lg font-bold">Ledger Activity</h4>
+<div class="space-y-8 relative">
+<!-- Timeline Line -->
+<div class="absolute left-3 top-2 bottom-2 w-px bg-outline-variant/30"></div>
+<div class="relative pl-10">
+<div class="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-primary ring-4 ring-background"></div>
+<p class="font-label text-[10px] tracking-widest uppercase text-outline mb-1">August 24, 2024</p>
+<p class="font-headline text-sm font-bold">Dividend Disbursement</p>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed">Quarterly distribution for Harbor Bridge Debt processed ($12,400).</p>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-background"></div>
+<p class="font-label text-[10px] tracking-widest uppercase text-outline mb-1">August 18, 2024</p>
+<p class="font-headline text-sm font-bold">Tax Statement Available</p>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed">2023 Form K-1 for Oxford St. Development is now ready for download.</p>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-background"></div>
+<p class="font-label text-[10px] tracking-widest uppercase text-outline mb-1">August 12, 2024</p>
+<p class="font-headline text-sm font-bold">Repayment Notified</p>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed">Notice of early repayment for Bridge Loan #883 received.</p>
+</div>
+</div>
+</div>
+</aside>
+</section>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on Dashboard per rules, but included for structure if needed on deeper pages) -->
+<!-- Suppressed on Dashboard/Details as requested -->
+</body></html>

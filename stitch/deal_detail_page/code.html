@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Oak Ridge Residential Development | Woodfield Private Ledger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#131c25",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#bec7d3",
+                        "primary-container": "#1c252e",
+                        "tertiary-container": "#132637",
+                        "background": "#faf9f8",
+                        "on-primary-container": "#838c97",
+                        "outline-variant": "#c4c6cb",
+                        "surface-dim": "#dadad9",
+                        "primary": "#071018",
+                        "on-error": "#ffffff",
+                        "surface": "#faf9f8",
+                        "surface-container-low": "#f4f3f2",
+                        "surface-container-high": "#e9e8e7",
+                        "on-secondary-fixed-variant": "#594325",
+                        "surface-container": "#eeeeed",
+                        "on-tertiary-fixed": "#091d2e",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e3e2e1",
+                        "secondary-container": "#fddab2",
+                        "secondary-fixed": "#ffddb6",
+                        "on-surface-variant": "#44474b",
+                        "surface-bright": "#faf9f8",
+                        "on-tertiary-container": "#7b8da2",
+                        "surface-tint": "#565f6a",
+                        "on-primary-fixed-variant": "#3f4852",
+                        "tertiary": "#001020",
+                        "on-tertiary-fixed-variant": "#36485b",
+                        "outline": "#75777c",
+                        "inverse-on-surface": "#f1f0f0",
+                        "surface-variant": "#e3e2e1",
+                        "inverse-surface": "#2f3130",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#785e3e",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#d1e4fb",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#b5c8df",
+                        "secondary": "#735a3a",
+                        "inverse-primary": "#bec7d3",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#dae3f0",
+                        "on-secondary-fixed": "#291801",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#e2c19b"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #faf9f8; }
+        ::-webkit-scrollbar-thumb { background: #e3e2e1; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-72 fixed left-0 top-0 border-r-0 bg-[#faf9f8] dark:bg-[#071018] flex flex-col py-8 z-50">
+<div class="px-8 mb-12">
+<h1 class="font-serif text-2xl font-bold tracking-tighter text-[#071018] dark:text-[#faf9f8]">Woodfield</h1>
+<p class="font-sans text-xs tracking-widest uppercase text-slate-500 mt-1">Private Ledger</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center px-6 py-4 text-[#071018] dark:text-white font-bold bg-[#f4f3f2] dark:bg-[#1c252e] border-l-4 border-[#071018] dark:border-[#fddab2] font-serif text-sm tracking-tight uppercase" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="business_center">business_center</span>
+                Deal Flow
+            </a>
+<a class="flex items-center px-6 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="verified_user">verified_user</span>
+                Security
+            </a>
+<a class="flex items-center px-6 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="analytics">analytics</span>
+                Reporting
+            </a>
+<a class="flex items-center px-6 py-4 text-slate-500 dark:text-slate-400 hover:text-[#071018] dark:hover:text-white transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="admin_panel_settings">admin_panel_settings</span>
+                Admin
+            </a>
+</nav>
+<div class="px-8 pt-8 border-t border-slate-200/50">
+<button class="w-full bg-primary text-on-primary py-4 px-6 text-xs font-bold tracking-widest uppercase hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                New Investment
+            </button>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="sticky top-0 z-40 w-full h-20 bg-[#faf9f8]/80 dark:bg-[#071018]/80 backdrop-blur-xl border-b border-slate-200/20 dark:border-white/5 shadow-sm dark:shadow-none ml-72 flex justify-between items-center px-12">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 font-sans text-xs tracking-widest uppercase placeholder-slate-400 w-64" placeholder="SEARCH PORTFOLIO..." type="text"/>
+</div>
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#071018] dark:text-[#fddab2] font-semibold font-sans text-xs tracking-widest uppercase" href="#">Overview</a>
+<a class="text-slate-400 dark:text-slate-500 hover:text-[#071018] dark:hover:text-white transition-opacity font-sans text-xs tracking-widest uppercase" href="#">Documents</a>
+<a class="text-slate-400 dark:text-slate-500 hover:text-[#071018] dark:hover:text-white transition-opacity font-sans text-xs tracking-widest uppercase" href="#">Analytics</a>
+</nav>
+<div class="flex items-center gap-4 border-l border-slate-200/50 pl-8">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors" data-icon="settings">settings</span>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container border border-outline-variant">
+<img alt="User Profile" data-alt="professional headshot of a refined executive male in a tailored suit against a neutral architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABXX8hWj9_U7hlkWBH0umtbiAUBjly8N1ZLuhkMg0TVU3F-Ypjb9Gt-J_CY2TmuphWUGjwmGzhPg4Xsn5cd8eu358mKX0Bi0oAyLlSo082hfzvTKHSS_CluLMO87ekjlRCMgfqcGD1ZgwytJgbliDmxaE-DFVBK9BCrL0jaMnslKNdxGCw7ldtUp31PgF44VokDIS_lQcNkG1X5-ajEiiHbl_O4GjPdbaRZZRSw111cOPOY6BTlIzbE0q9p0228rVzyIPiLPl_1wA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-72 p-12 max-w-[1600px]">
+<!-- Header Section: Asymmetric Editorial Layout -->
+<section class="flex flex-col md:flex-row gap-12 mb-20 items-start">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-tighter uppercase rounded-full">Active Offering</span>
+<span class="text-outline text-[10px] font-bold tracking-widest uppercase">Ref: WF-2024-082</span>
+</div>
+<h1 class="font-headline text-5xl md:text-6xl font-black text-primary tracking-tighter leading-none mb-6">
+                    Oak Ridge Residential <br/>Development
+                </h1>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="font-label text-sm font-medium">Toronto, ON</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-sm" data-icon="category">category</span>
+<span class="font-label text-sm font-medium">1st Mortgage Construction</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-96 bg-surface-container-lowest p-8 rounded-lg shadow-sm border border-outline-variant/10">
+<div class="mb-8">
+<p class="text-[10px] font-bold tracking-widest uppercase text-outline mb-1">Target Return</p>
+<p class="font-headline text-4xl font-bold text-secondary">11.00% <span class="text-sm font-body font-normal text-on-surface-variant">p.a.</span></p>
+</div>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="text-xs font-medium text-on-surface-variant">Loan Amount</span>
+<span class="text-sm font-bold">$1,250,000</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="text-xs font-medium text-on-surface-variant">LTV Ratio</span>
+<span class="text-sm font-bold">65%</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="text-xs font-medium text-on-surface-variant">Term</span>
+<span class="text-sm font-bold">12 Months</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 font-bold tracking-widest uppercase text-xs hover:scale-[0.98] transition-all duration-200">
+                    Request Subscription
+                </button>
+</div>
+</section>
+<!-- Bento Grid: Key Metrics & Summary -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+<!-- Summary Box -->
+<div class="md:col-span-2 bg-surface-container-low p-10 rounded-xl relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="font-serif text-2xl font-bold mb-6">Investment Summary</h3>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed max-w-2xl">
+                        A 12-month construction bridge loan secured by a 1st mortgage on a 6-unit luxury townhome project. The borrower is an experienced local developer with a 20+ year history. Funds will be deployed for immediate site preparation and foundation work to maintain the project's aggressive delivery schedule.
+                    </p>
+<div class="mt-8 flex gap-12">
+<div>
+<h4 class="text-[10px] font-bold tracking-widest uppercase text-outline mb-2">Use of Funds</h4>
+<p class="text-sm font-semibold">Site Prep &amp; Foundations</p>
+</div>
+<div>
+<h4 class="text-[10px] font-bold tracking-widest uppercase text-outline mb-2">Exit Strategy</h4>
+<p class="text-sm font-semibold">Sale of Completed Units</p>
+</div>
+</div>
+</div>
+<!-- Subtle Texture/Graphic -->
+<div class="absolute right-0 bottom-0 opacity-10 transform translate-x-1/4 translate-y-1/4">
+<span class="material-symbols-outlined text-[240px]" data-icon="architecture">architecture</span>
+</div>
+</div>
+<!-- Risk Mitigation -->
+<div class="bg-surface-container-high p-10 rounded-xl border border-outline-variant/10">
+<h3 class="font-serif text-2xl font-bold mb-6">Security &amp; Risk</h3>
+<div class="space-y-6">
+<div>
+<p class="text-[10px] font-bold tracking-widest uppercase text-secondary mb-2">Primary Security</p>
+<ul class="space-y-2">
+<li class="flex gap-2 text-sm font-medium"><span class="material-symbols-outlined text-xs text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> 1st Charge Mortgage</li>
+<li class="flex gap-2 text-sm font-medium"><span class="material-symbols-outlined text-xs text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Personal Guarantees</li>
+<li class="flex gap-2 text-sm font-medium"><span class="material-symbols-outlined text-xs text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Corporate Covenant</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<p class="text-[10px] font-bold tracking-widest uppercase text-error mb-2">Identified Risks</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                            Market softening in the luxury segment and potential construction delays due to supply chain volatility. Mitigated by developer experience and conservative LTV.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline / Milestone Tracker: Vertical Editorial List -->
+<section class="mb-24 flex flex-col md:flex-row gap-20">
+<div class="w-full md:w-1/3">
+<h3 class="font-serif text-3xl font-bold mb-4 tracking-tight">Project Timeline</h3>
+<p class="text-on-surface-variant font-body mb-8">Strict adherence to milestone-based funding ensures capital preservation throughout the development cycle.</p>
+<div class="p-6 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="event_available">event_available</span>
+</div>
+<div>
+<p class="text-[10px] font-bold tracking-widest uppercase text-outline">Current Status</p>
+<p class="text-sm font-bold">Funding Phase 1 Complete</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 space-y-0 relative">
+<!-- Timeline Line -->
+<div class="absolute left-8 top-0 bottom-0 w-[1px] bg-outline-variant/30"></div>
+<!-- Timeline Item 1 -->
+<div class="relative pl-24 pb-12 group">
+<div class="absolute left-7 top-0 w-3 h-3 rounded-full bg-secondary border-4 border-surface shadow-sm z-10 transition-transform group-hover:scale-125"></div>
+<p class="text-[10px] font-extrabold tracking-widest uppercase text-secondary mb-1">MARCH 2024</p>
+<h4 class="font-serif text-xl font-bold mb-2">Loan Origination &amp; Site Acquisition</h4>
+<p class="text-sm text-on-surface-variant max-w-lg">Full due diligence completed. 1st charge registered. Appraisal confirmed at $2.1M as-is value.</p>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative pl-24 pb-12 group">
+<div class="absolute left-7 top-0 w-3 h-3 rounded-full bg-secondary border-4 border-surface shadow-sm z-10"></div>
+<p class="text-[10px] font-extrabold tracking-widest uppercase text-secondary mb-1">MAY 2024</p>
+<h4 class="font-serif text-xl font-bold mb-2">Site Preparation &amp; Excavation</h4>
+<p class="text-sm text-on-surface-variant max-w-lg">Current Phase. Heavy machinery deployed. Soil testing and clearing finalized for foundation pouring.</p>
+<div class="mt-4 flex gap-2">
+<img alt="Site Progress" class="h-20 w-32 object-cover rounded shadow-sm grayscale hover:grayscale-0 transition-all cursor-pointer" data-alt="construction site with yellow heavy excavator digging foundations for a luxury residential building project" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI7_vLFzECXS2k8hl8n4bExmmD8KJv7-UKRYPRwvLGmOr91dCo-UseqHnPyjvmBaZDyOvilNhA-ALJ1-2MntaMpGQ9qcJWERzuaVZPMGHeR-HstN3aH0_EQreJUvlTedVQs7t_p-n7z07-yiXSEf2m3cykK0VyD9PUHz8OqDjrLUp2C_VgQ4WhsgwuQNnEF6r6UKdU_LMgG5QWVSSgaFvVM7HgwvTwMobkKjxnzVbzP5mnRnp9ABTpabGvBb5qRQ58Bj5oTmxk_84"/>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative pl-24 pb-12 group">
+<div class="absolute left-7 top-0 w-3 h-3 rounded-full bg-outline-variant border-4 border-surface shadow-sm z-10"></div>
+<p class="text-[10px] font-extrabold tracking-widest uppercase text-outline mb-1">SEPTEMBER 2024</p>
+<h4 class="font-serif text-xl font-bold mb-2 text-on-surface-variant">Lock-up &amp; Envelope</h4>
+<p class="text-sm text-on-surface-variant max-w-lg">Projected milestone for framing completion and roofing. Triggers second-tier inspection for interest payment review.</p>
+</div>
+<!-- Timeline Item 4 -->
+<div class="relative pl-24 pb-4 group">
+<div class="absolute left-7 top-0 w-3 h-3 rounded-full bg-outline-variant border-4 border-surface shadow-sm z-10"></div>
+<p class="text-[10px] font-extrabold tracking-widest uppercase text-outline mb-1">MARCH 2025</p>
+<h4 class="font-serif text-xl font-bold mb-2 text-on-surface-variant">Project Exit &amp; Repayment</h4>
+<p class="text-sm text-on-surface-variant max-w-lg">Anticipated sale of all 6 units. Mortgage discharge upon successful conveyance.</p>
+</div>
+</div>
+</section>
+<!-- Documents Section: Clean Slab Layout -->
+<section class="mb-20">
+<div class="flex items-end justify-between mb-10 border-b border-outline-variant/30 pb-6">
+<div>
+<h3 class="font-serif text-3xl font-bold tracking-tight">Due Diligence</h3>
+<p class="text-on-surface-variant font-body text-sm mt-2 uppercase tracking-widest">Verified documentation for professional review</p>
+</div>
+<button class="flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="download_for_offline">download_for_offline</span>
+                    Download All Archive
+                </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Doc Card 1 -->
+<div class="flex items-center p-6 bg-surface-container-lowest border border-outline-variant/20 hover:border-secondary transition-colors cursor-pointer group">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary mr-5 group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold tracking-tight uppercase mb-0.5">Appraisal Report</p>
+<p class="text-[10px] text-outline uppercase font-medium">PDF • 14.2 MB • Updated May 02</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Doc Card 2 -->
+<div class="flex items-center p-6 bg-surface-container-lowest border border-outline-variant/20 hover:border-secondary transition-colors cursor-pointer group">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary mr-5 group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold tracking-tight uppercase mb-0.5">Topographic Survey</p>
+<p class="text-[10px] text-outline uppercase font-medium">PDF • 8.1 MB • Registered 2023</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Doc Card 3 -->
+<div class="flex items-center p-6 bg-surface-container-lowest border border-outline-variant/20 hover:border-secondary transition-colors cursor-pointer group">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary mr-5 group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold tracking-tight uppercase mb-0.5">Title Search Results</p>
+<p class="text-[10px] text-outline uppercase font-medium">PDF • 2.4 MB • Verified Clean</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Location Context -->
+<section class="bg-surface-container rounded-xl overflow-hidden flex flex-col md:flex-row h-[400px]">
+<div class="w-full md:w-1/3 p-12 flex flex-col justify-center">
+<h3 class="font-serif text-2xl font-bold mb-4">Prime GTA Location</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Situated in a high-demand residential pocket with proximity to major transit corridors and luxury retail nodes. Toronto's housing shortage continues to drive demand for boutique multi-unit developments.</p>
+<div class="flex items-center gap-2 text-primary font-bold text-xs tracking-widest uppercase cursor-pointer group">
+                    View Area Analysis
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-dim relative group">
+<img alt="Map location" class="w-full h-full object-cover filter contrast-[1.1] brightness-[0.9]" data-alt="monochrome architectural map rendering of a dense urban city center with glowing highlights on residential development plots" data-location="Toronto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCczAzCZ8m6sMzsMRTr5LXYCEHWIPQNx9rCcRSn1aLyJn-B41UviVSb6_dKDlX27uM8v9j6nZcObk6tEwJPUC1TrhRKL5hfB7DEKzyBkES6-fOFKA9vtk04WA6nN3G95-KEB0BkqinXYW6hjLYk6AOZB3lSEd4otSo_eZoQmsNahjUqOb58kJg7LmhGaYgb31jAjUROFqb0yty546zsY8YlIccrKp-E1m5pagUqYeR0IcjGG2jKoZmNOZr0DGNEtocgfpw4u5Tge9E"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-4 h-4 bg-secondary rounded-full ring-8 ring-secondary/20 animate-pulse"></div>
+</div>
+</div>
+</section>
+<!-- Footer / Disclosure -->
+<footer class="mt-32 pt-12 border-t border-outline-variant/30 text-[10px] text-outline tracking-wider uppercase leading-loose pb-20">
+<div class="flex flex-col md:flex-row justify-between gap-12">
+<div class="max-w-2xl">
+<p class="font-bold text-on-surface-variant mb-4">Investment Disclosure</p>
+<p>Information presented in this portal is for verified investors of Woodfield Developments only. Past performance does not guarantee future results. Real estate investments involve risk including the potential loss of principal. Woodfield Developments is not an investment advisor and does not provide financial or legal advice. Investors should consult with their own professional team before committing capital.</p>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-bold text-on-surface-variant">Confidentiality</p>
+<p>Restricted Document: WF-082-OR<br/>Access Logged: ID_8293-XP<br/>© 2024 Woodfield Private Ledger</p>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

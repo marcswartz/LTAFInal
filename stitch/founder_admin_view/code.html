@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Woodfield Developments | Founder Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#131c25",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#bec7d3",
+              "primary-container": "#1c252e",
+              "tertiary-container": "#132637",
+              "background": "#faf9f8",
+              "on-primary-container": "#838c97",
+              "outline-variant": "#c4c6cb",
+              "surface-dim": "#dadad9",
+              "primary": "#071018",
+              "on-error": "#ffffff",
+              "surface": "#faf9f8",
+              "surface-container-low": "#f4f3f2",
+              "surface-container-high": "#e9e8e7",
+              "on-secondary-fixed-variant": "#594325",
+              "surface-container": "#eeeeed",
+              "on-tertiary-fixed": "#091d2e",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e3e2e1",
+              "secondary-container": "#fddab2",
+              "secondary-fixed": "#ffddb6",
+              "on-surface-variant": "#44474b",
+              "surface-bright": "#faf9f8",
+              "on-tertiary-container": "#7b8da2",
+              "surface-tint": "#565f6a",
+              "on-primary-fixed-variant": "#3f4852",
+              "tertiary": "#001020",
+              "on-tertiary-fixed-variant": "#36485b",
+              "outline": "#75777c",
+              "inverse-on-surface": "#f1f0f0",
+              "surface-variant": "#e3e2e1",
+              "inverse-surface": "#2f3130",
+              "on-background": "#1a1c1c",
+              "on-secondary-container": "#785e3e",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#d1e4fb",
+              "on-surface": "#1a1c1c",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#b5c8df",
+              "secondary": "#735a3a",
+              "inverse-primary": "#bec7d3",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#dae3f0",
+              "on-secondary-fixed": "#291801",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#e2c19b"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Noto Serif', serif; }
+        .glass-panel {
+            background: rgba(250, 249, 248, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .soul-gradient {
+            background: linear-gradient(135deg, #071018 0%, #1c252e 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-72 fixed left-0 top-0 border-r-0 bg-[#faf9f8] flex flex-col py-8 z-50">
+<div class="px-8 mb-12">
+<h1 class="font-serif text-2xl font-bold tracking-tighter text-[#071018]">Woodfield</h1>
+<p class="font-serif text-sm tracking-tight uppercase font-medium text-slate-500">Private Ledger</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 px-6 py-4 text-slate-500 hover:text-[#071018] hover:bg-[#f4f3f2] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-4 px-6 py-4 text-slate-500 hover:text-[#071018] hover:bg-[#f4f3f2] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined">business_center</span> Deal Flow
+            </a>
+<a class="flex items-center gap-4 px-6 py-4 text-slate-500 hover:text-[#071018] hover:bg-[#f4f3f2] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined">verified_user</span> Security
+            </a>
+<a class="flex items-center gap-4 px-6 py-4 text-slate-500 hover:text-[#071018] hover:bg-[#f4f3f2] transition-colors duration-200 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined">analytics</span> Reporting
+            </a>
+<a class="flex items-center gap-4 text-[#071018] font-bold bg-[#f4f3f2] border-l-4 border-[#071018] px-6 py-4 font-serif text-sm tracking-tight uppercase font-medium" href="#">
+<span class="material-symbols-outlined">admin_panel_settings</span> Admin
+            </a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full soul-gradient text-white py-4 font-label text-xs tracking-widest uppercase font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm">add</span> New Investment
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-72 min-h-screen">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 w-full h-20 bg-[#faf9f8]/80 backdrop-blur-xl border-b border-slate-200/20 shadow-sm flex justify-between items-center px-12">
+<div class="flex items-center gap-8 flex-1">
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-label text-[10px] tracking-widest pl-10 text-on-surface" placeholder="SEARCH INVESTORS OR DEALS..." type="text"/>
+</div>
+<h2 class="font-serif text-lg font-black text-[#071018]">Investor Portal</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4 text-slate-400">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-opacity">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-opacity">settings</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-opacity">logout</span>
+</div>
+<div class="h-10 w-10 bg-surface-container-high overflow-hidden border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a senior executive in a suit with neutral office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Rnsb6A9iS9D4lWZyTwl4dFKSmS5QXLkK5T15e3xpAw-QBxWUBHSlBKTlP3f_sXR85yRL7JoSSwWEk4Q35lrPL0bNMadYICTerliFeyEfghX-VInalq_M7vAyfNsigPRGLrQ6E-Kxx33wgrWDrsM0MMfyTQQMRh0kLso2Rr5yHd45LrIy6X51tY5CkzVNHKUr18hT5dhVvLwijtq7YaXmjNbowX_shxaghiRfYPQk7mIqr9B0D3Uwwtquw0zvlTOrfqbg5h6Uuew"/>
+</div>
+</div>
+</header>
+<!-- Admin Content -->
+<div class="p-12 space-y-12">
+<!-- Hero Header & Global Action -->
+<section class="flex justify-between items-end">
+<div class="space-y-2">
+<p class="font-label text-xs tracking-[0.2em] text-secondary font-bold uppercase">Executive Dashboard</p>
+<h1 class="font-headline text-5xl font-black tracking-tight text-primary">Founder Admin View</h1>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 font-label text-xs tracking-widest uppercase font-bold flex items-center gap-3 shadow-xl">
+<span class="material-symbols-outlined text-lg">upload_file</span> Upload New Deal
+                </button>
+</section>
+<!-- Bento Grid: Analytics & Bulk Comms -->
+<section class="grid grid-cols-12 gap-8">
+<!-- Deal Engagement Analytics -->
+<div class="col-span-8 bg-surface-container-low p-8 relative overflow-hidden">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="font-headline text-2xl font-bold text-primary">Deal Engagement</h3>
+<p class="text-sm text-on-surface-variant mt-1">Real-time investor interest tracking</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-tighter uppercase rounded-full">Active Monitoring</span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest border-l-2 border-secondary shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 soul-gradient flex items-center justify-center text-white">
+<span class="material-symbols-outlined">apartment</span>
+</div>
+<div>
+<p class="font-bold text-primary">The Belvedere Heights</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">Multi-family Residential</p>
+</div>
+</div>
+<div class="flex items-center gap-12">
+<div class="text-center">
+<p class="text-xl font-headline font-bold">42</p>
+<p class="text-[10px] uppercase tracking-widest text-slate-400">Views</p>
+</div>
+<div class="text-center">
+<p class="text-xl font-headline font-bold text-secondary">12</p>
+<p class="text-[10px] uppercase tracking-widest text-slate-400">Requests</p>
+</div>
+<button class="text-primary hover:bg-surface-container-high p-2 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest shadow-sm opacity-80">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-high flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">factory</span>
+</div>
+<div>
+<p class="font-bold text-primary">Westgate Industrial Hub</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">Logistics / Class A</p>
+</div>
+</div>
+<div class="flex items-center gap-12">
+<div class="text-center">
+<p class="text-xl font-headline font-bold">18</p>
+<p class="text-[10px] uppercase tracking-widest text-slate-400">Views</p>
+</div>
+<div class="text-center">
+<p class="text-xl font-headline font-bold">04</p>
+<p class="text-[10px] uppercase tracking-widest text-slate-400">Requests</p>
+</div>
+<button class="text-primary hover:bg-surface-container-high p-2 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bulk Investor Update -->
+<div class="col-span-4 soul-gradient p-8 text-white flex flex-col">
+<div class="mb-8">
+<h3 class="font-headline text-2xl font-bold">Bulk Update</h3>
+<p class="text-on-primary-container text-xs mt-2 uppercase tracking-widest">Broadcast to 142 Investors</p>
+</div>
+<div class="flex-1 space-y-4">
+<input class="w-full bg-white/5 border-b border-white/20 focus:border-secondary-container transition-colors py-3 px-0 text-sm focus:ring-0 placeholder:text-white/30" placeholder="Subject Line" type="text"/>
+<textarea class="w-full bg-white/5 border-b border-white/20 focus:border-secondary-container transition-colors py-3 px-0 text-sm focus:ring-0 placeholder:text-white/30 resize-none" placeholder="Compose update message..." rows="6"></textarea>
+</div>
+<button class="mt-8 bg-secondary-container text-on-secondary-container w-full py-4 font-label text-xs tracking-widest uppercase font-bold hover:bg-white transition-colors">
+                        Send Update
+                    </button>
+</div>
+</section>
+<!-- Active Deals Table & Status -->
+<section class="bg-surface-container-lowest p-8 shadow-sm">
+<div class="flex justify-between items-center mb-10">
+<h3 class="font-headline text-2xl font-bold text-primary">Active Portfolio &amp; Deal Status</h3>
+<div class="flex gap-4">
+<button class="text-[10px] tracking-widest uppercase font-bold text-secondary border-b-2 border-secondary pb-1">All Deals</button>
+<button class="text-[10px] tracking-widest uppercase font-bold text-slate-400 hover:text-primary pb-1">Fundraising</button>
+<button class="text-[10px] tracking-widest uppercase font-bold text-slate-400 hover:text-primary pb-1">Closing</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-outline-variant/30 text-[10px] tracking-[0.2em] uppercase font-bold text-slate-400">
+<th class="pb-6">Deal Name</th>
+<th class="pb-6">Capital Goal</th>
+<th class="pb-6">Committed</th>
+<th class="pb-6">Investors</th>
+<th class="pb-6">Portal Visibility</th>
+<th class="pb-6 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="group hover:bg-surface-container-low transition-colors">
+<td class="py-6 font-bold text-primary">Oakwood Mixed Use</td>
+<td class="py-6 font-serif">$12,500,000</td>
+<td class="py-6">
+<div class="flex items-center gap-2">
+<div class="w-24 h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 65%"></div>
+</div>
+<span class="text-xs font-bold text-secondary">65%</span>
+</div>
+</td>
+<td class="py-6">
+<div class="flex -space-x-2">
+<div class="h-6 w-6 rounded-full border border-white bg-slate-200 overflow-hidden"><img class="object-cover h-full w-full" data-alt="avatar 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8IwcpVD5uzwQf1S-QyHPaG8hY7_EeVX570xhb5jubPI_0JFjjwPQRxCC4bwtLO2UC4TKLRBoxpMTdqWcvt5KXqIllYxJR-fWymcSw12dAq_iloQhnPlZNir3WS4dMgItzvxSWrsxpwpxN1m8n6WVnikp07cfgJRPLzcoT6EVEmqtCqQacSDaWQlVsgx_96dKs1egKT1ZWxZ2QFNAdUPTty7Rogu2OKjqXs2jyP5RSG2-w8Elqgm_UtLUKJ5MzsjdVL4HTkVO3tiQ"/></div>
+<div class="h-6 w-6 rounded-full border border-white bg-slate-200 overflow-hidden"><img class="object-cover h-full w-full" data-alt="avatar 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyIrfdn578pxwav536DY2hH_OY-MIWZz3XDP9uUeS4nURV3s_ZbzdOko9GvhCvuy04WMM5fuxtHlb2FJFqxwTVvgbB6VGCZyJsCXmEY69uwx1YoVzfYKqinTD0Sv0f52AtSRNKBaKldWtHy6RjpuzSxX7V8jLlpGTSQiU7TU8zoyNNlXB8HOr8jUEaWnTg9T2c2nIqxXZ77TjhwuJA3VLtZEVLKmOCvgdyaPcq3cx3FMMhplQOh2SjJp9JhRGPAoavhBOgM7uVM1I"/></div>
+<div class="h-6 w-6 rounded-full border border-white bg-slate-800 flex items-center justify-center text-[8px] text-white font-bold">+18</div>
+</div>
+</td>
+<td class="py-6">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-6 text-right">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary">more_vert</button>
+</td>
+</tr>
+<tr class="group hover:bg-surface-container-low transition-colors">
+<td class="py-6 font-bold text-primary">Harbor Wharf Logistics</td>
+<td class="py-6 font-serif">$8,200,000</td>
+<td class="py-6">
+<div class="flex items-center gap-2">
+<div class="w-24 h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 20%"></div>
+</div>
+<span class="text-xs font-bold text-secondary">20%</span>
+</div>
+</td>
+<td class="py-6">
+<div class="flex -space-x-2">
+<div class="h-6 w-6 rounded-full border border-white bg-slate-200 overflow-hidden"><img class="object-cover h-full w-full" data-alt="avatar 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwJ3MlFZbl8cKIGoffAKRd9GZ9tdwIJ06sKt0bOqEpDObu5PAwyOxULhvv1_NOwEcdX6aV31Z1_-6Xrx0fFqz1zFS0OjrQAsBqL-Ie6e-fGo_7GmtAMt2YWcRqIfOIz9cUd-G_3mRBvXGwD5yAT0QI9sfdY5dlfjN6EXFj77Eindqeg1ncyO8ffmovdO0XCsbnq0I7rtd_ImpWXSYD_7a_m9YtPbtOroD09UQ0ytjEx8hFkNYMb1A5IFocqAxO_Q3c_7BS-wh6XyI"/></div>
+<div class="h-6 w-6 rounded-full border border-white bg-slate-800 flex items-center justify-center text-[8px] text-white font-bold">+4</div>
+</div>
+</td>
+<td class="py-6">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-6 text-right">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- CRM & Document Manager Columnar Layout -->
+<section class="grid grid-cols-12 gap-8">
+<!-- CRM-Lite: Investor Notes -->
+<div class="col-span-7 space-y-8">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-2xl font-bold text-primary">Investor Interest Log</h3>
+<button class="text-xs font-bold uppercase tracking-widest text-secondary hover:underline">View All CRM</button>
+</div>
+<div class="space-y-4">
+<!-- CRM Card -->
+<div class="bg-surface-container-low p-6 flex items-start gap-4">
+<div class="h-12 w-12 flex-shrink-0 soul-gradient text-white flex items-center justify-center font-bold">JW</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<p class="font-bold text-primary">James Whitaker <span class="text-slate-400 font-normal ml-2 text-xs tracking-widest uppercase">Whitaker Capital</span></p>
+<span class="text-[10px] text-slate-400 uppercase font-bold">2h ago</span>
+</div>
+<p class="text-sm text-on-surface-variant mt-2 leading-relaxed">Expressed high interest in Harbor Wharf. Requested historical data on adjacent industrial parcels. Follow-up scheduled for Tuesday.</p>
+<div class="mt-4 flex gap-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-[10px] font-bold text-slate-500 uppercase">Industrial</span>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase">Hot Prospect</span>
+</div>
+</div>
+</div>
+<!-- CRM Card -->
+<div class="bg-surface-container-low p-6 flex items-start gap-4">
+<div class="h-12 w-12 flex-shrink-0 bg-surface-container-high text-primary flex items-center justify-center font-bold">EM</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<p class="font-bold text-primary">Elena Martinez <span class="text-slate-400 font-normal ml-2 text-xs tracking-widest uppercase">Private Family Office</span></p>
+<span class="text-[10px] text-slate-400 uppercase font-bold">Yesterday</span>
+</div>
+<p class="text-sm text-on-surface-variant mt-2 leading-relaxed">Wants to pivot $2M from Oakwood to Belvedere. Needs tax structure verification for current fiscal year.</p>
+<div class="mt-4 flex gap-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-[10px] font-bold text-slate-500 uppercase">Residential</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Document Manager -->
+<div class="col-span-5 bg-surface-container-high p-8 flex flex-col">
+<div class="mb-8">
+<h3 class="font-headline text-2xl font-bold text-primary">Shared Assets</h3>
+<p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Repository for Deal Materials</p>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex items-center justify-between p-4 bg-white shadow-sm group cursor-pointer hover:border-secondary border border-transparent transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">description</span>
+<div>
+<p class="text-sm font-bold text-primary">Belvedere_ProForma_V4.pdf</p>
+<p class="text-[10px] text-slate-400 uppercase">Updated Oct 12 • 4.2 MB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">download</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white shadow-sm group cursor-pointer hover:border-secondary border border-transparent transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">folder_zip</span>
+<div>
+<p class="text-sm font-bold text-primary">Project_Site_Photography_ALL.zip</p>
+<p class="text-[10px] text-slate-400 uppercase">Updated Oct 10 • 128 MB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">download</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white shadow-sm group cursor-pointer hover:border-secondary border border-transparent transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">insert_chart</span>
+<div>
+<p class="text-sm font-bold text-primary">Investor_Pitch_Deck_Master.pptx</p>
+<p class="text-[10px] text-slate-400 uppercase">Updated Oct 08 • 12 MB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">download</span>
+</div>
+</div>
+<button class="mt-8 border border-primary text-primary w-full py-4 font-label text-xs tracking-widest uppercase font-bold hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">cloud_upload</span> Manage Documents
+                    </button>
+</div>
+</section>
+</div>
+</main>
+</body></html>
