@@ -63,7 +63,7 @@ const yieldBars = [
   { label: "Nov", height: "90%", active: true },
 ];
 
-export default function ReportingPage() {
+export function ReportingPage() {
   return (
     <main className="min-h-screen bg-[#faf9f8] text-[#1a1c1c]">
       <div className="mx-auto max-w-[1600px] px-6 py-10 md:px-10 lg:px-12">

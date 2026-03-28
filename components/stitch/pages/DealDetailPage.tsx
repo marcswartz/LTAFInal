@@ -51,7 +51,7 @@ const documents = [
   },
 ];
 
-export default function DealDetailPage() {
+export function DealDetailPage() {
   return (
     <main className="min-h-screen bg-[#faf9f8] text-[#1a1c1c]">
       <div className="mx-auto max-w-[1600px] px-5 py-8 sm:px-8 lg:px-12 lg:py-12">

@@ -63,7 +63,7 @@ function Icon({ name }: { name: string }) {
   );
 }
 
-export default function SecurityPage() {
+export function SecurityPage() {
   return (
     <main className="min-h-screen bg-[#faf9f8] text-[#1a1c1c]">
       <section className="mx-auto flex w-full max-w-7xl flex-col gap-14 px-6 py-10 lg:px-12 lg:py-16">
