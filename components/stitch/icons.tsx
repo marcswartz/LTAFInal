@@ -5,7 +5,6 @@ type IconName =
   | "business_center"
   | "verified_user"
   | "analytics"
-  | "admin_panel_settings"
   | "search"
   | "notifications"
   | "logout"
@@ -103,13 +102,6 @@ const iconPaths: Record<IconName, React.ReactNode> = {
       <path d="M7 16V9" />
       <path d="M12 16V5" />
       <path d="M17 16v-3" />
-    </>
-  ),
-  admin_panel_settings: (
-    <>
-      <path d="M12 2 4 5v6c0 4.4 2.7 8.3 8 11 5.3-2.7 8-6.6 8-11V5l-8-3Z" />
-      <circle cx="12" cy="11" r="2.5" />
-      <path d="M8.5 17a4.8 4.8 0 0 1 7 0" />
     </>
   ),
   search: (
