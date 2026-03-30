@@ -5,7 +5,6 @@ export const navItems = [
     label: "Deal Flow",
     icon: "business_center" as const,
   },
-  { href: "/security", label: "Security", icon: "verified_user" as const },
   { href: "/reporting", label: "Reporting", icon: "analytics" as const },
   {
     href: "/admin",

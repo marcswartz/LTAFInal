@@ -13,11 +13,6 @@ const pages = [
     description: "Deal profile, risk structure, documents, and milestones.",
   },
   {
-    href: "/security",
-    label: "Security",
-    description: "Capital protection workflow, priority stack, and documents.",
-  },
-  {
     href: "/reporting",
     label: "Reporting",
     description: "Distributions, updates, executive notes, and statements.",
@@ -58,7 +53,7 @@ export default function Home() {
                   Pages
                 </p>
                 <p className="font-display text-4xl font-bold text-[var(--color-primary)]">
-                  5
+                  4
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-black/5 bg-white/70 p-5">
