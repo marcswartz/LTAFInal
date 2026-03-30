@@ -82,17 +82,23 @@ export function ReportingPage() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <button className="inline-flex items-center gap-2 border border-[#c4c6cb]/40 bg-white px-5 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#071018] transition-colors hover:bg-[#f4f3f2]">
+            <button
+              type="button"
+              className="portal-button-sm border border-[#c4c6cb]/40 bg-white text-[#071018] transition-colors hover:bg-[#f4f3f2]"
+            >
               Export Statement
             </button>
-            <button className="inline-flex items-center gap-2 bg-[#071018] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-white transition-opacity hover:opacity-90">
+            <button
+              type="button"
+              className="portal-button-sm bg-[#071018] text-white shadow-[0_12px_28px_rgba(7,16,24,0.18)] transition-opacity hover:opacity-90"
+            >
               Contact Advisor
             </button>
           </div>
         </section>
 
         <section className="mb-16 grid gap-6 lg:grid-cols-3">
-          <article className="border-l-2 border-[#735a3a] bg-white p-8 shadow-sm">
+          <article className="rounded-2xl border-l-2 border-[#735a3a] bg-white p-8 shadow-sm">
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
               Portfolio Value
             </p>
@@ -107,7 +113,7 @@ export function ReportingPage() {
             </div>
           </article>
 
-          <article className="border-l-2 border-[#1c252e] bg-white p-8 shadow-sm">
+          <article className="rounded-2xl border-l-2 border-[#1c252e] bg-white p-8 shadow-sm">
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
               Next Distribution
             </p>
@@ -120,8 +126,8 @@ export function ReportingPage() {
               </span>
             </div>
             <div className="mt-8">
-              <div className="mb-2 h-1 w-full bg-[#e3e2e1]">
-                <div className="h-full w-[85%] bg-[#735a3a]" />
+              <div className="mb-2 h-1.5 w-full rounded-full bg-[#e3e2e1]">
+                <div className="h-full w-[85%] rounded-full bg-[#735a3a]" />
               </div>
               <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[#838c97]">
                 9 Days Remaining
@@ -129,7 +135,7 @@ export function ReportingPage() {
             </div>
           </article>
 
-          <article className="flex flex-col justify-between bg-[#071018] p-8 text-white shadow-sm">
+          <article className="flex flex-col justify-between rounded-2xl bg-[#071018] p-8 text-white shadow-sm">
             <div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#bec7d3]">
                 Quick Access
@@ -140,7 +146,7 @@ export function ReportingPage() {
             </div>
             <a
               href="#distribution-history"
-              className="mt-8 inline-flex items-center justify-between border-b border-white/20 pb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#e2c19b] transition-colors hover:text-white"
+              className="portal-button-sm mt-8 w-full border border-white/20 bg-white/5 text-[#e2c19b] transition-colors hover:border-white/30 hover:bg-white/10 hover:text-white"
             >
               <span>Download PDF (2.4MB)</span>
             </a>
@@ -156,17 +162,27 @@ export function ReportingPage() {
               >
                 Distribution History
               </h2>
-              <div className="flex gap-4">
-                <button className="border-b-2 border-[#071018] pb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#071018]">
+              <div
+                className="flex rounded-full border border-[#c4c6cb]/25 bg-[#f4f3f2] p-1"
+                role="group"
+                aria-label="View mode"
+              >
+                <button
+                  type="button"
+                  className="rounded-full bg-white px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#071018] shadow-sm"
+                >
                   Table
                 </button>
-                <button className="pb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]">
+                <button
+                  type="button"
+                  className="rounded-full px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]"
+                >
                   Chart
                 </button>
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white shadow-sm">
+            <div className="overflow-hidden rounded-2xl bg-white shadow-sm">
               <table className="w-full border-collapse text-left">
                 <thead>
                   <tr className="border-b border-[#c4c6cb]/20">
@@ -210,7 +226,7 @@ export function ReportingPage() {
           </div>
 
           <div className="lg:col-span-4">
-            <div className="flex h-full flex-col border border-[#c4c6cb]/20 bg-white p-8 shadow-sm">
+            <div className="flex h-full flex-col rounded-2xl border border-[#c4c6cb]/20 bg-white p-8 shadow-sm">
               <h2 className="font-serif text-xl font-bold tracking-tight text-[#071018]">
                 Yield Performance
               </h2>
@@ -219,7 +235,7 @@ export function ReportingPage() {
                   {yieldBars.map((bar) => (
                     <div key={bar.label} className="group relative flex-1">
                       <div
-                        className={`w-full transition-colors ${
+                        className={`w-full rounded-t-full transition-colors ${
                           bar.active ? "bg-[#735a3a]" : "bg-[#e3e2e1] hover:bg-[#735a3a]"
                         }`}
                         style={{ height: bar.height, minHeight: "64px" }}
@@ -260,10 +276,10 @@ export function ReportingPage() {
 
         <section className="mb-16 grid gap-10 lg:grid-cols-12">
           <div className="space-y-8 lg:col-span-7">
-            <div className="group overflow-hidden bg-white shadow-sm">
+            <div className="group overflow-hidden rounded-2xl bg-white shadow-sm">
               <div className="relative h-80 bg-[linear-gradient(135deg,#d1e4fb_0%,#f4f3f2_45%,#e3e2e1_100%)]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(7,16,24,0.14),transparent_38%),linear-gradient(180deg,transparent,rgba(7,16,24,0.1))]" />
-                <div className="absolute left-6 top-6 bg-[#071018] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+                <div className="absolute left-6 top-6 rounded-full bg-[#071018] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-md">
                   Site Update: Nov 15
                 </div>
               </div>
@@ -280,7 +296,7 @@ export function ReportingPage() {
                   {milestoneCards.map((card) => (
                     <div
                       key={card.label}
-                      className="bg-[#f4f3f2] p-4 text-center transition-colors hover:bg-[#e3e2e1]"
+                      className="rounded-2xl bg-[#f4f3f2] p-4 text-center transition-colors hover:bg-[#e3e2e1]"
                     >
                       <span className="block font-serif text-2xl font-bold text-[#071018]">
                         {card.value}
@@ -296,7 +312,7 @@ export function ReportingPage() {
           </div>
 
           <aside className="space-y-10 lg:col-span-5">
-            <div className="relative border border-[#735a3a]/10 bg-[#fddab2]/30 p-10">
+            <div className="relative rounded-[1.5rem] border border-[#735a3a]/10 bg-[#fddab2]/30 p-10">
               <span className="absolute right-6 top-6 text-5xl text-[#735a3a]/20">
                 &quot;
               </span>
@@ -309,7 +325,7 @@ export function ReportingPage() {
                 exactly as projected.&quot;
               </p>
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center bg-[#e3e2e1] text-[10px] font-bold uppercase tracking-[0.18em] text-[#071018]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e3e2e1] text-[10px] font-bold uppercase tracking-[0.18em] text-[#071018]">
                   MW
                 </div>
                 <div>
@@ -333,7 +349,7 @@ export function ReportingPage() {
                   href="#"
                   className="group flex items-center gap-5 border-b border-[#c4c6cb]/10 pb-5 transition-transform hover:translate-x-2"
                 >
-                  <div className="h-20 w-20 flex-shrink-0 bg-[#e3e2e1]" />
+                  <div className="h-20 w-20 shrink-0 rounded-2xl bg-[#e3e2e1]" />
                   <div>
                     <p className="mb-1 text-[8px] font-bold uppercase tracking-[0.2em] text-[#735a3a]">
                       {update.date}

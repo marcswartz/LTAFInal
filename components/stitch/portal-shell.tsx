@@ -62,7 +62,10 @@ export function PortalShell({
           })}
         </nav>
         <div className="mt-8 lg:absolute lg:bottom-8 lg:left-8 lg:right-8">
-          <button className="portal-button w-full bg-[var(--color-primary)] text-white shadow-[0_22px_40px_rgba(15,26,36,0.22)] hover:bg-[var(--color-primary-soft)]">
+          <button
+            type="button"
+            className="portal-button w-full bg-[var(--color-primary)] text-white shadow-[0_22px_40px_rgba(15,26,36,0.22)] hover:bg-[var(--color-primary-soft)]"
+          >
             <Icon name="add" className="h-4 w-4" />
             New Investment
           </button>
@@ -93,10 +96,16 @@ export function PortalShell({
               </div>
             </div>
             <div className="flex items-center gap-3 self-end lg:self-auto">
-              <button className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(185,175,164,0.24)] bg-white/70 text-[var(--color-copy-soft)] hover:text-[var(--color-primary)]">
+              <button
+                type="button"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(185,175,164,0.24)] bg-white/70 text-[var(--color-copy-soft)] hover:text-[var(--color-primary)]"
+              >
                 <Icon name="notifications" className="h-5 w-5" />
               </button>
-              <button className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(185,175,164,0.24)] bg-white/70 text-[var(--color-copy-soft)] hover:text-[var(--color-warning)]">
+              <button
+                type="button"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(185,175,164,0.24)] bg-white/70 text-[var(--color-copy-soft)] hover:text-[var(--color-warning)]"
+              >
                 <Icon name="logout" className="h-5 w-5" />
               </button>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-primary)] text-sm font-bold text-white">

@@ -33,7 +33,7 @@ export function DealDetailPage({ deal }: DealDetailPageProps) {
       <section className="portal-card rounded-[1.8rem] border border-black/5 p-6 sm:p-8">
         <Link
           href="/dashboard"
-          className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-[var(--color-copy-soft)] hover:text-[var(--color-primary)]"
+          className="-ml-1 inline-flex items-center gap-2 rounded-full px-3 py-2 text-[10px] font-bold uppercase tracking-[0.24em] text-[var(--color-copy-soft)] transition-colors hover:bg-white/60 hover:text-[var(--color-primary)]"
         >
           <span>Portfolio Dashboard</span>
           <ArrowRightIcon className="h-4 w-4 rotate-180" />

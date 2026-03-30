@@ -138,7 +138,10 @@ export function AdminPage() {
                 from a single control surface.
               </p>
             </div>
-            <button className="portal-button bg-[var(--color-primary)] text-white transition-opacity hover:opacity-90">
+            <button
+              type="button"
+              className="portal-button bg-[var(--color-primary)] text-white transition-opacity hover:opacity-90"
+            >
               <Icon name="upload_file" className="h-4 w-4" />
               Upload New Deal
             </button>
@@ -205,7 +208,10 @@ export function AdminPage() {
               />
             </label>
           </div>
-          <button className="portal-button mt-6 w-full bg-[var(--color-secondary-soft)] text-[var(--color-secondary)] transition-colors hover:bg-white">
+          <button
+            type="button"
+            className="portal-button mt-6 w-full bg-[var(--color-secondary-soft)] text-[var(--color-secondary)] transition-colors hover:bg-white"
+          >
             <Icon name="mail" className="h-4 w-4" />
             Send Update
           </button>
@@ -322,7 +328,10 @@ export function AdminPage() {
                   >
                     {deal.status}
                   </StatusPill>
-                  <button className="rounded-full border border-black/5 bg-white p-2 text-[var(--color-copy-soft)] transition-colors hover:text-[var(--color-primary)]">
+                  <button
+                    type="button"
+                    className="rounded-full border border-black/5 bg-white p-2 text-[var(--color-copy-soft)] transition-colors hover:text-[var(--color-primary)]"
+                  >
                     <Icon name="chevron_right" className="h-4 w-4" />
                   </button>
                 </div>
@@ -344,8 +353,9 @@ export function AdminPage() {
               "Archive closed deal",
             ].map((label, index) => (
               <button
+                type="button"
                 key={label}
-                className={`flex w-full items-center justify-between rounded-[1.4rem] border px-4 py-4 text-left transition-colors ${
+                className={`flex w-full items-center justify-between rounded-full border px-4 py-4 text-left transition-colors ${
                   index === 0
                     ? "border-[var(--color-secondary-soft)] bg-[#fff8ef]"
                     : "border-black/5 bg-white hover:bg-[var(--color-surface)]"
