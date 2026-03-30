@@ -115,9 +115,6 @@ export function DealDetailPage() {
                 <span className="text-sm font-bold text-[#071018]">12 Months</span>
               </div>
             </div>
-            <button className="mt-8 w-full bg-[#071018] px-6 py-4 text-xs font-bold uppercase tracking-[0.24em] text-white transition-opacity hover:opacity-90">
-              Request Subscription
-            </button>
           </aside>
         </section>
 
@@ -299,40 +296,6 @@ export function DealDetailPage() {
                 <span className="text-[#75777c]">›</span>
               </div>
             ))}
-          </div>
-        </section>
-
-        <section className="mb-14 overflow-hidden rounded-xl bg-[#eeeeed]">
-          <div className="grid min-h-[400px] lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
-              <h2
-                className="text-2xl font-bold tracking-tight text-[#071018] sm:text-3xl"
-                style={{ fontFamily: "Georgia, serif" }}
-              >
-                Prime GTA Location
-              </h2>
-              <p className="mt-4 max-w-lg text-sm leading-7 text-[#44474b]">
-                Situated in a high-demand residential pocket with proximity to
-                major transit corridors and luxury retail nodes. Toronto&apos;s
-                housing shortage continues to drive demand for boutique
-                multi-unit developments.
-              </p>
-              <div className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#071018]">
-                View Area Analysis
-                <span>→</span>
-              </div>
-            </div>
-            <div className="relative min-h-[280px] bg-[#dadad9]">
-              <Image
-                alt="Map location"
-                className="h-full w-full object-cover brightness-[0.9] contrast-[1.1]"
-                width={1200}
-                height={800}
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCczAzCZ8m6sMzsMRTr5LXYCEHWIPQNx9rCcRSn1aLyJn-B41UviVSb6_dKDlX27uM8v9j6nZcObk6tEwJPUC1TrhRKL5hfB7DEKzyBkES6-fOFKA9vtk04WA6nN3G95-KEB0BkqinXYW6hjLYk6AOZB3lSEd4otSo_eZoQmsNahjUqOb58kJg7LmhGaYgb31jAjUROFqb0yty546zsY8YlIccrKp-E1m5pagUqYeR0IcjGG2jKoZmNOZr0DGNEtocgfpw4u5Tge9E"
-              />
-              <div className="absolute inset-0 bg-[#071018]/20" />
-              <div className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#735a3a] ring-8 ring-[#735a3a]/20 animate-pulse" />
-            </div>
           </div>
         </section>
 

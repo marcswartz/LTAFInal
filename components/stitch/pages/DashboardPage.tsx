@@ -51,7 +51,7 @@ const activity = [
 
 const metrics = [
   { label: "Capital Deployed", value: "$4.2M", accent: "text-[var(--color-primary)]" },
-  { label: "Active Deals", value: "03", accent: "text-[var(--color-secondary)]" },
+  { label: "Active Deals", value: "4", accent: "text-[var(--color-secondary)]" },
   { label: "Expected Yield", value: "11.5%", accent: "text-[var(--color-primary)]" },
 ];
 
@@ -66,10 +66,6 @@ export function DashboardPage() {
           <h1 className="font-display max-w-4xl text-5xl font-black tracking-[-0.05em] text-[var(--color-primary)] sm:text-7xl">
             $4.2M
           </h1>
-          <p className="mt-3 max-w-2xl text-lg leading-8 text-[var(--color-copy-soft)]">
-            Capital deployed across the live book, with active security monitoring and
-            milestone-based funding controls.
-          </p>
         </div>
 
         <div className="lg:col-span-5 lg:flex lg:justify-end">
@@ -94,7 +90,7 @@ export function DashboardPage() {
       </section>
 
       <section className="grid gap-6 lg:grid-cols-12">
-        <div className="portal-card rounded-[1.75rem] border-l-4 border-[var(--color-secondary)] p-6 lg:col-span-4">
+        <div className="portal-card rounded-[1.75rem] border-l-4 border-[var(--color-secondary)] p-6 lg:col-span-12">
           <div className="mb-5 flex items-start justify-between gap-4">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--color-secondary)]">
@@ -116,31 +112,6 @@ export function DashboardPage() {
                 <p className={`text-sm font-semibold ${item.tone}`}>{item.amount}</p>
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="portal-card-dark rounded-[1.75rem] p-6 sm:p-8 lg:col-span-8">
-          <div className="mb-4 flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-[#ba1a1a]" />
-            <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--color-secondary-soft)]">
-              Material Change Alert
-            </p>
-          </div>
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2 className="font-display max-w-2xl text-3xl font-bold tracking-[-0.04em] text-white">
-                Parkview Residences: rezoning approved
-              </h2>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/72">
-                The municipal council has granted full approval for Phase II expansion.
-                Projected IRR has been adjusted upward by 45bps and the underwriting
-                memo has been reissued.
-              </p>
-            </div>
-            <button className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-[var(--color-secondary-soft)] transition-colors hover:text-white">
-              Review update
-              <ArrowRightIcon className="h-4 w-4" />
-            </button>
           </div>
         </div>
       </section>

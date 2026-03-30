@@ -96,9 +96,6 @@ export function PortalShell({
               <button className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(185,175,164,0.24)] bg-white/70 text-[var(--color-copy-soft)] hover:text-[var(--color-primary)]">
                 <Icon name="notifications" className="h-5 w-5" />
               </button>
-              <button className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(185,175,164,0.24)] bg-white/70 text-[var(--color-copy-soft)] hover:text-[var(--color-primary)]">
-                <Icon name="settings" className="h-5 w-5" />
-              </button>
               <button className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(185,175,164,0.24)] bg-white/70 text-[var(--color-copy-soft)] hover:text-[var(--color-warning)]">
                 <Icon name="logout" className="h-5 w-5" />
               </button>
