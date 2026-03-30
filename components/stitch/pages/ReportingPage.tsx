@@ -326,7 +326,7 @@ export function ReportingPage() {
               </p>
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e3e2e1] text-[10px] font-bold uppercase tracking-[0.18em] text-[#071018]">
-                  MW
+                  MD
                 </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#071018]">

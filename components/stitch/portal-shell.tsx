@@ -18,7 +18,7 @@ export function PortalShell({
   return (
     <div className="portal-shell portal-scrollbar relative min-h-screen lg:pl-72">
       <aside className="border-b border-black/5 bg-[rgba(252,250,247,0.92)] px-6 py-6 backdrop-blur-lg lg:fixed lg:inset-y-0 lg:left-0 lg:z-20 lg:w-72 lg:border-b-0 lg:border-r lg:px-8 lg:py-8">
-        <div className="mb-8 flex items-end justify-between lg:mb-12 lg:block">
+        <div className="mb-8 flex items-center justify-between lg:mb-12 lg:flex-col lg:items-start lg:gap-3">
           <div>
             <p className="font-display text-3xl font-bold tracking-[-0.05em] text-[var(--color-primary)]">
               Woodfield
@@ -27,8 +27,8 @@ export function PortalShell({
               Private Ledger
             </p>
           </div>
-          <div className="hidden rounded-full border border-[rgba(185,175,164,0.28)] bg-white/70 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[var(--color-copy-soft)] lg:inline-flex">
-            Phase II
+          <div className="hidden items-center justify-center rounded-full border border-[rgba(185,175,164,0.28)] bg-white/70 px-3 py-1 text-[0.625rem] font-bold uppercase tracking-[0.22em] text-[var(--color-copy-soft)] lg:inline-flex">
+            <span className="pl-[0.22em]">Phase II</span>
           </div>
         </div>
         <nav className="grid gap-2">
@@ -109,7 +109,7 @@ export function PortalShell({
                 <Icon name="logout" className="h-5 w-5" />
               </button>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-primary)] text-sm font-bold text-white">
-                MW
+                MD
               </div>
             </div>
           </div>

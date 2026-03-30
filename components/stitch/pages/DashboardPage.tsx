@@ -99,18 +99,13 @@ export function DashboardPage() {
 
       <section className="grid gap-6 xl:grid-cols-[1.55fr_0.9fr]">
         <article className="portal-card rounded-[1.8rem] border border-black/5 p-6 sm:p-8">
-          <div className="flex flex-col gap-3 border-b border-black/5 pb-5 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--color-secondary)]">
-                Active Portfolio
-              </p>
-              <h2 className="font-display mt-3 text-3xl font-bold tracking-[-0.04em] text-[var(--color-primary)]">
-                Click any position for deal overview
-              </h2>
-            </div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[var(--color-copy-soft)]">
-              Mostly numbers, no extra flow screen
+          <div className="border-b border-black/5 pb-5">
+            <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--color-secondary)]">
+              Active Portfolio
             </p>
+            <h2 className="font-display mt-3 text-3xl font-bold tracking-[-0.04em] text-[var(--color-primary)]">
+              Click any position for deal overview
+            </h2>
           </div>
 
           <div className="mt-6 hidden grid-cols-[1.45fr_repeat(5,minmax(0,0.72fr))_24px] gap-4 px-4 text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--color-copy-soft)] lg:grid">
