@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navItems } from "@/components/stitch/data";
 import { Icon } from "@/components/stitch/icons";
+import { HeaderActions } from "@/components/stitch/HeaderActions";
 
 type PortalShellProps = {
   children: React.ReactNode;
@@ -95,22 +96,8 @@ export function PortalShell({
                 ) : null}
               </div>
             </div>
-            <div className="flex items-center gap-3 self-end lg:self-auto">
-              <button
-                type="button"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(185,175,164,0.24)] bg-white/70 text-[var(--color-copy-soft)] hover:text-[var(--color-primary)]"
-              >
-                <Icon name="notifications" className="h-5 w-5" />
-              </button>
-              <button
-                type="button"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(185,175,164,0.24)] bg-white/70 text-[var(--color-copy-soft)] hover:text-[var(--color-warning)]"
-              >
-                <Icon name="logout" className="h-5 w-5" />
-              </button>
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-primary)] text-sm font-bold text-white">
-                MD
-              </div>
+            <div className="self-end lg:self-auto">
+              <HeaderActions />
             </div>
           </div>
         </header>

@@ -166,3 +166,44 @@ textarea {
   background: rgba(139, 107, 67, 0.2);
   border-radius: 9999px;
 }
+
+@media print {
+  /* Hide chrome — sidebar, header, action buttons */
+  aside,
+  header,
+  .portal-shell > .relative > header {
+    display: none !important;
+  }
+
+  /* Remove sidebar offset so content fills the page */
+  .portal-shell {
+    padding-left: 0 !important;
+  }
+
+  /* Hide the Export/Contact buttons on the reporting page */
+  button[type="button"] {
+    display: none !important;
+  }
+
+  /* Force background colors to print (bars, cards, borders) */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Prevent awkward page breaks inside cards */
+  article,
+  section,
+  table {
+    break-inside: avoid;
+  }
+
+  /* Ensure full-width layout */
+  main {
+    padding: 0 !important;
+  }
+
+  body {
+    background: white !important;
+  }
+}

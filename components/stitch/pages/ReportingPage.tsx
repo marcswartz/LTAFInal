@@ -1,40 +1,14 @@
+"use client";
+
+import { useState } from "react";
+
 const distributionRows = [
-  {
-    date: "Nov 01, 2023",
-    description: "Monthly Dividend - Equity Portfolio",
-    yield: "8.2%",
-    amount: "$32,500.00",
-  },
-  {
-    date: "Oct 01, 2023",
-    description: "Monthly Dividend - Equity Portfolio",
-    yield: "8.1%",
-    amount: "$32,100.00",
-  },
-  {
-    date: "Sep 01, 2023",
-    description: "Monthly Dividend - Equity Portfolio",
-    yield: "8.3%",
-    amount: "$32,850.00",
-  },
-  {
-    date: "Aug 01, 2023",
-    description: "Monthly Dividend - Equity Portfolio",
-    yield: "7.9%",
-    amount: "$31,200.00",
-  },
-  {
-    date: "Jul 01, 2023",
-    description: "Monthly Dividend - Equity Portfolio",
-    yield: "8.0%",
-    amount: "$31,800.00",
-  },
-  {
-    date: "Jun 01, 2023",
-    description: "Monthly Dividend - Equity Portfolio",
-    yield: "8.2%",
-    amount: "$32,450.00",
-  },
+  { date: "Nov 01, 2023", label: "Nov", description: "Monthly Dividend - Equity Portfolio", yield: "8.2%", amount: "$32,500.00", raw: 32500 },
+  { date: "Oct 01, 2023", label: "Oct", description: "Monthly Dividend - Equity Portfolio", yield: "8.1%", amount: "$32,100.00", raw: 32100 },
+  { date: "Sep 01, 2023", label: "Sep", description: "Monthly Dividend - Equity Portfolio", yield: "8.3%", amount: "$32,850.00", raw: 32850 },
+  { date: "Aug 01, 2023", label: "Aug", description: "Monthly Dividend - Equity Portfolio", yield: "7.9%", amount: "$31,200.00", raw: 31200 },
+  { date: "Jul 01, 2023", label: "Jul", description: "Monthly Dividend - Equity Portfolio", yield: "8.0%", amount: "$31,800.00", raw: 31800 },
+  { date: "Jun 01, 2023", label: "Jun", description: "Monthly Dividend - Equity Portfolio", yield: "8.2%", amount: "$32,450.00", raw: 32450 },
 ];
 
 const milestoneCards = [
@@ -44,14 +18,8 @@ const milestoneCards = [
 ];
 
 const priorUpdates = [
-  {
-    date: "Oct 20, 2023",
-    title: "Foundation Pour & Utility Grid Integration",
-  },
-  {
-    date: "Sep 15, 2023",
-    title: "Capital Allocation & Vendor Contract Finalization",
-  },
+  { date: "Oct 20, 2023", title: "Foundation Pour & Utility Grid Integration" },
+  { date: "Sep 15, 2023", title: "Capital Allocation & Vendor Contract Finalization" },
 ];
 
 const yieldBars = [
@@ -63,7 +31,23 @@ const yieldBars = [
   { label: "Nov", height: "90%", active: true },
 ];
 
+const BASE = 30000;
+const MAX_RAW = Math.max(...distributionRows.map((r) => r.raw));
+const RANGE = MAX_RAW - BASE;
+const TOTAL = distributionRows.reduce((sum, r) => sum + r.raw, 0);
+
 export function ReportingPage() {
+  const [view, setView] = useState<"table" | "chart">("table");
+  const [hoveredBar, setHoveredBar] = useState<string | null>(null);
+
+  function handleExport() {
+    window.print();
+  }
+
+  function handleContactAdvisor() {
+    document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <main className="min-h-screen bg-[#faf9f8] text-[#1a1c1c]">
       <div className="mx-auto max-w-[1600px] px-6 py-10 md:px-10 lg:px-12">
@@ -84,12 +68,14 @@ export function ReportingPage() {
           <div className="flex flex-wrap gap-3">
             <button
               type="button"
+              onClick={handleExport}
               className="portal-button-sm border border-[#c4c6cb]/40 bg-white text-[#071018] transition-colors hover:bg-[#f4f3f2]"
             >
               Export Statement
             </button>
             <button
               type="button"
+              onClick={handleContactAdvisor}
               className="portal-button-sm bg-[#071018] text-white shadow-[0_12px_28px_rgba(7,16,24,0.18)] transition-opacity hover:opacity-90"
             >
               Contact Advisor
@@ -144,12 +130,13 @@ export function ReportingPage() {
                 Monthly Performance Report
               </h2>
             </div>
-            <a
-              href="#distribution-history"
+            <button
+              type="button"
+              onClick={handleExport}
               className="portal-button-sm mt-8 w-full border border-white/20 bg-white/5 text-[#e2c19b] transition-colors hover:border-white/30 hover:bg-white/10 hover:text-white"
             >
               <span>Download PDF (2.4MB)</span>
-            </a>
+            </button>
           </article>
         </section>
 
@@ -169,13 +156,23 @@ export function ReportingPage() {
               >
                 <button
                   type="button"
-                  className="rounded-full bg-white px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#071018] shadow-sm"
+                  onClick={() => setView("table")}
+                  className={`rounded-full px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] transition-colors ${
+                    view === "table"
+                      ? "bg-white text-[#071018] shadow-sm"
+                      : "text-[#838c97] hover:text-[#071018]"
+                  }`}
                 >
                   Table
                 </button>
                 <button
                   type="button"
-                  className="rounded-full px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]"
+                  onClick={() => setView("chart")}
+                  className={`rounded-full px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] transition-colors ${
+                    view === "chart"
+                      ? "bg-white text-[#071018] shadow-sm"
+                      : "text-[#838c97] hover:text-[#071018]"
+                  }`}
                 >
                   Chart
                 </button>
@@ -183,45 +180,78 @@ export function ReportingPage() {
             </div>
 
             <div className="overflow-hidden rounded-2xl bg-white shadow-sm">
-              <table className="w-full border-collapse text-left">
-                <thead>
-                  <tr className="border-b border-[#c4c6cb]/20">
-                    <th className="px-8 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
-                      Date
-                    </th>
-                    <th className="px-8 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
-                      Description
-                    </th>
-                    <th className="px-8 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
-                      Yield
-                    </th>
-                    <th className="px-8 py-6 text-right text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
-                      Amount
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-[#c4c6cb]/10">
-                  {distributionRows.map((row) => (
-                    <tr
-                      key={`${row.date}-${row.amount}`}
-                      className="transition-colors hover:bg-[#e3e2e1]/40"
-                    >
-                      <td className="px-8 py-5 text-xs font-bold text-[#071018]">
-                        {row.date}
-                      </td>
-                      <td className="px-8 py-5 text-xs text-[#44474b]">
-                        {row.description}
-                      </td>
-                      <td className="px-8 py-5 text-xs font-medium text-[#565f6a]">
-                        {row.yield}
-                      </td>
-                      <td className="px-8 py-5 text-right text-xs font-bold text-[#071018]">
-                        {row.amount}
-                      </td>
+              {view === "table" ? (
+                <table className="w-full border-collapse text-left">
+                  <thead>
+                    <tr className="border-b border-[#c4c6cb]/20">
+                      <th className="px-8 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">Date</th>
+                      <th className="px-8 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">Description</th>
+                      <th className="px-8 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">Yield</th>
+                      <th className="px-8 py-6 text-right text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">Amount</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="divide-y divide-[#c4c6cb]/10">
+                    {distributionRows.map((row) => (
+                      <tr
+                        key={`${row.date}-${row.amount}`}
+                        className="transition-colors hover:bg-[#e3e2e1]/40"
+                      >
+                        <td className="px-8 py-5 text-xs font-bold text-[#071018]">{row.date}</td>
+                        <td className="px-8 py-5 text-xs text-[#44474b]">{row.description}</td>
+                        <td className="px-8 py-5 text-xs font-medium text-[#565f6a]">{row.yield}</td>
+                        <td className="px-8 py-5 text-right text-xs font-bold text-[#071018]">{row.amount}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              ) : (
+                <div className="px-8 py-10">
+                  <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
+                    Monthly Distribution Amount
+                  </p>
+                  <p className="mb-8 text-[10px] text-[#c4c6cb]">Hover bars for details</p>
+                  <div className="flex h-52 items-end gap-3">
+                    {[...distributionRows].reverse().map((row) => {
+                      const heightPct = ((row.raw - BASE) / RANGE) * 100;
+                      const isHovered = hoveredBar === row.label;
+                      const isNov = row.label === "Nov";
+                      return (
+                        <div
+                          key={row.label}
+                          className="group relative flex flex-1 flex-col items-center gap-2"
+                          onMouseEnter={() => setHoveredBar(row.label)}
+                          onMouseLeave={() => setHoveredBar(null)}
+                        >
+                          {isHovered && (
+                            <div className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-[#071018] px-2 py-1 text-[9px] font-bold text-white shadow-md">
+                              {row.amount}
+                            </div>
+                          )}
+                          <div
+                            className={`w-full rounded-t-lg transition-all ${
+                              isNov || isHovered
+                                ? "bg-[#735a3a]"
+                                : "bg-[#e3e2e1]"
+                            }`}
+                            style={{ height: `${heightPct}%`, minHeight: "20px" }}
+                          />
+                          <span className="text-[9px] font-bold uppercase tracking-[0.1em] text-[#838c97]">
+                            {row.label}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="mt-6 flex items-center justify-between border-t border-[#c4c6cb]/20 pt-5">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
+                      6-Month Total
+                    </span>
+                    <span className="text-sm font-bold text-[#071018]">
+                      ${TOTAL.toLocaleString()}.00
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -249,23 +279,15 @@ export function ReportingPage() {
 
                 <div className="space-y-4">
                   <div className="flex justify-between border-b border-[#c4c6cb]/10 pb-2">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
-                      Current Yield
-                    </span>
-                    <span className="text-xs font-bold text-[#071018]">
-                      8.24% p.a.
-                    </span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">Current Yield</span>
+                    <span className="text-xs font-bold text-[#071018]">8.24% p.a.</span>
                   </div>
                   <div className="flex justify-between border-b border-[#c4c6cb]/10 pb-2">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
-                      Capital At Risk
-                    </span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">Capital At Risk</span>
                     <span className="text-xs font-bold text-[#071018]">$12.4M</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">
-                      Loan To Value
-                    </span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#838c97]">Loan To Value</span>
                     <span className="text-xs font-bold text-[#071018]">64%</span>
                   </div>
                 </div>
@@ -313,9 +335,7 @@ export function ReportingPage() {
 
           <aside className="space-y-10 lg:col-span-5">
             <div className="relative rounded-[1.5rem] border border-[#735a3a]/10 bg-[#fddab2]/30 p-10">
-              <span className="absolute right-6 top-6 text-5xl text-[#735a3a]/20">
-                &quot;
-              </span>
+              <span className="absolute right-6 top-6 text-5xl text-[#735a3a]/20">&quot;</span>
               <h3 className="mb-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#735a3a]">
                 Founder&apos;s Note
               </h3>
@@ -329,12 +349,8 @@ export function ReportingPage() {
                   MD
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#071018]">
-                    Marcus Woodfield
-                  </p>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#838c97]">
-                    Managing Director
-                  </p>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#071018]">Marcus Woodfield</p>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#838c97]">Managing Director</p>
                 </div>
               </div>
             </div>
@@ -351,9 +367,7 @@ export function ReportingPage() {
                 >
                   <div className="h-20 w-20 shrink-0 rounded-2xl bg-[#e3e2e1]" />
                   <div>
-                    <p className="mb-1 text-[8px] font-bold uppercase tracking-[0.2em] text-[#735a3a]">
-                      {update.date}
-                    </p>
+                    <p className="mb-1 text-[8px] font-bold uppercase tracking-[0.2em] text-[#735a3a]">{update.date}</p>
                     <h4 className="text-sm font-bold text-[#071018] transition-colors group-hover:text-[#735a3a]">
                       {update.title}
                     </h4>
@@ -364,72 +378,37 @@ export function ReportingPage() {
           </aside>
         </section>
 
-        <section className="border-t border-[#c4c6cb]/20 pt-12">
+        <section id="contact-section" className="border-t border-[#c4c6cb]/20 pt-12">
           <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
             <div className="max-w-xs">
-              <h2 className="mb-4 font-serif text-2xl font-black tracking-tight text-[#071018]">
-                Woodfield
-              </h2>
+              <h2 className="mb-4 font-serif text-2xl font-black tracking-tight text-[#071018]">Woodfield</h2>
               <p className="text-[10px] font-medium uppercase leading-relaxed tracking-[0.2em] text-[#838c97]">
-                Securing generational wealth through institutional-grade real estate
-                developments.
+                Securing generational wealth through institutional-grade real estate developments.
               </p>
             </div>
 
             <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
               <div>
-                <h3 className="mb-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#071018]">
-                  Resources
-                </h3>
+                <h3 className="mb-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#071018]">Resources</h3>
                 <ul className="space-y-3">
-                  <li>
-                    <a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">
-                      Annual Tax Form 1099
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">
-                      Offering Memorandum
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">
-                      Subscription Agreement
-                    </a>
-                  </li>
+                  <li><a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">Annual Tax Form 1099</a></li>
+                  <li><a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">Offering Memorandum</a></li>
+                  <li><a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">Subscription Agreement</a></li>
                 </ul>
               </div>
               <div>
-                <h3 className="mb-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#071018]">
-                  Contact
-                </h3>
+                <h3 className="mb-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#071018]">Contact</h3>
                 <ul className="space-y-3">
-                  <li>
-                    <a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">
-                      Investor Relations
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">
-                      General Inquiries
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">
-                      Trust Department
-                    </a>
-                  </li>
+                  <li><a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">Investor Relations</a></li>
+                  <li><a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">General Inquiries</a></li>
+                  <li><a className="text-[10px] uppercase tracking-[0.18em] text-[#838c97] transition-colors hover:text-[#071018]" href="#">Trust Department</a></li>
                 </ul>
               </div>
               <div>
-                <h3 className="mb-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#071018]">
-                  Office
-                </h3>
+                <h3 className="mb-6 text-[10px] font-bold uppercase tracking-[0.2em] text-[#071018]">Office</h3>
                 <p className="text-[10px] uppercase leading-loose tracking-[0.18em] text-[#838c97]">
-                  One Vanderbilt Avenue,
-                  <br />
-                  Floor 54, New York, NY 10017
-                  <br />
+                  One Vanderbilt Avenue,<br />
+                  Floor 54, New York, NY 10017<br />
                   T: +1 212 555 0198
                 </p>
               </div>
@@ -439,12 +418,8 @@ export function ReportingPage() {
           <div className="mt-16 flex flex-col gap-4 border-t border-[#e3e2e1] py-8 text-[8px] font-bold uppercase tracking-[0.3em] text-[#c4c6cb] sm:flex-row sm:items-center sm:justify-between">
             <p>(c) 2024 Woodfield Developments LLC. All Rights Reserved.</p>
             <div className="flex gap-8">
-              <a href="#" className="transition-colors hover:text-[#071018]">
-                Privacy Policy
-              </a>
-              <a href="#" className="transition-colors hover:text-[#071018]">
-                Terms of Service
-              </a>
+              <a href="#" className="transition-colors hover:text-[#071018]">Privacy Policy</a>
+              <a href="#" className="transition-colors hover:text-[#071018]">Terms of Service</a>
             </div>
           </div>
         </section>
