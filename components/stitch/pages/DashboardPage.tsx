@@ -3,57 +3,66 @@ import {
   formatCount,
   formatCurrencyCompact,
   formatPercent,
-  liquiditySchedule,
-  monthlyIncomeRunRate,
+  getLiquiditySchedule,
+  getMonthlyIncomeRunRate,
   portfolioDeals,
-  portfolioLtv,
-  totalCommittedCapital,
-  totalPropertyValue,
-  upcomingLiquidityTotal,
-  weightedTargetYield,
-  weightedTermMonths,
+  getPortfolioLtv,
+  getTotalCommittedCapital,
+  getTotalPropertyValue,
+  getUpcomingLiquidityTotal,
+  getWeightedTargetYield,
+  getWeightedTermMonths,
 } from "@/components/stitch/data";
 import { ArrowRightIcon } from "@/components/stitch/icons";
 
-const headlineMetrics = [
-  {
-    label: "Capital Deployed",
-    value: formatCurrencyCompact(totalCommittedCapital),
-  },
-  {
-    label: "Active Deals",
-    value: formatCount(portfolioDeals.length),
-  },
-  {
-    label: "Expected Yield",
-    value: formatPercent(weightedTargetYield, 1),
-  },
-  {
-    label: "Gross Collateral",
-    value: formatCurrencyCompact(totalPropertyValue),
-  },
-];
-
-const portfolioMetrics = [
-  {
-    label: "Upcoming Liquidity",
-    value: formatCurrencyCompact(upcomingLiquidityTotal),
-  },
-  {
-    label: "Monthly Income Run Rate",
-    value: formatCurrencyCompact(monthlyIncomeRunRate),
-  },
-  {
-    label: "Portfolio LTV",
-    value: formatPercent(portfolioLtv),
-  },
-  {
-    label: "Weighted Term",
-    value: `${Math.round(weightedTermMonths)} mo`,
-  },
-];
-
 export function DashboardPage() {
+  const totalCommittedCapital = getTotalCommittedCapital();
+  const totalPropertyValue = getTotalPropertyValue();
+  const weightedTargetYield = getWeightedTargetYield();
+  const portfolioLtv = getPortfolioLtv();
+  const weightedTermMonths = getWeightedTermMonths();
+  const monthlyIncomeRunRate = getMonthlyIncomeRunRate();
+  const liquiditySchedule = getLiquiditySchedule();
+  const upcomingLiquidityTotal = getUpcomingLiquidityTotal();
+
+  const headlineMetrics = [
+    {
+      label: "Capital Deployed",
+      value: formatCurrencyCompact(totalCommittedCapital),
+    },
+    {
+      label: "Active Deals",
+      value: formatCount(portfolioDeals.length),
+    },
+    {
+      label: "Expected Yield",
+      value: formatPercent(weightedTargetYield, 1),
+    },
+    {
+      label: "Gross Collateral",
+      value: formatCurrencyCompact(totalPropertyValue),
+    },
+  ];
+
+  const portfolioMetrics = [
+    {
+      label: "Upcoming Liquidity",
+      value: formatCurrencyCompact(upcomingLiquidityTotal),
+    },
+    {
+      label: "Monthly Income Run Rate",
+      value: formatCurrencyCompact(monthlyIncomeRunRate),
+    },
+    {
+      label: "Portfolio LTV",
+      value: formatPercent(portfolioLtv),
+    },
+    {
+      label: "Weighted Term",
+      value: `${Math.round(weightedTermMonths)} mo`,
+    },
+  ];
+
   return (
     <div className="space-y-8">
       <section className="grid gap-4 sm:grid-cols-2 2xl:grid-cols-4">

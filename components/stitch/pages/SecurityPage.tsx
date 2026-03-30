@@ -2,7 +2,7 @@ import {
   formatCount,
   formatPercent,
   portfolioDeals,
-  portfolioLtv,
+  getPortfolioLtv,
 } from "@/components/stitch/data";
 import { Icon } from "@/components/stitch/icons";
 
@@ -37,7 +37,7 @@ export function SecurityPage() {
       <section className="grid gap-4 sm:grid-cols-2 2xl:grid-cols-4">
         {[
           ["Secured Positions", formatCount(portfolioDeals.length)],
-          ["Portfolio LTV", formatPercent(portfolioLtv)],
+          ["Portfolio LTV", formatPercent(getPortfolioLtv())],
           ["First-Lien Coverage", "100%"],
           ["Release Method", "Milestone"],
         ].map(([label, value]) => (

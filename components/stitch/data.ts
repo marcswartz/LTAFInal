@@ -376,34 +376,34 @@ export function getDealBySlug(slug: string) {
   return portfolioDeals.find((deal) => deal.slug === slug);
 }
 
-export const totalCommittedCapital = portfolioDeals.reduce(
+export const getTotalCommittedCapital = () => portfolioDeals.reduce(
   (total, deal) => total + deal.committedCapital,
   0,
 );
 
-export const totalPropertyValue = portfolioDeals.reduce(
+export const getTotalPropertyValue = () => portfolioDeals.reduce(
   (total, deal) => total + deal.propertyValue,
   0,
 );
 
-export const weightedTargetYield =
+export const getWeightedTargetYield = () =>
   portfolioDeals.reduce(
     (total, deal) => total + deal.committedCapital * deal.targetYield,
     0,
-  ) / totalCommittedCapital;
+  ) / getTotalCommittedCapital();
 
-export const portfolioLtv = (totalCommittedCapital / totalPropertyValue) * 100;
+export const getPortfolioLtv = () => (getTotalCommittedCapital() / getTotalPropertyValue()) * 100;
 
-export const weightedTermMonths =
+export const getWeightedTermMonths = () =>
   portfolioDeals.reduce(
     (total, deal) => total + deal.committedCapital * deal.termMonths,
     0,
-  ) / totalCommittedCapital;
+  ) / getTotalCommittedCapital();
 
-export const monthlyIncomeRunRate =
-  (totalCommittedCapital * weightedTargetYield) / 100 / 12;
+export const getMonthlyIncomeRunRate = () =>
+  (getTotalCommittedCapital() * getWeightedTargetYield()) / 100 / 12;
 
-export const liquiditySchedule = portfolioDeals
+export const getLiquiditySchedule = () => portfolioDeals
   .map((deal) => ({
     amount: deal.nextLiquidityAmount,
     date: deal.nextLiquidityDate,
@@ -416,7 +416,11 @@ export const liquiditySchedule = portfolioDeals
     );
   });
 
-export const upcomingLiquidityTotal = liquiditySchedule.reduce(
+export const getUpcomingLiquidityTotal = () => getLiquiditySchedule().reduce(
   (total, item) => total + item.amount,
   0,
 );
+
+export function addDeal(deal: DealRecord) {
+  portfolioDeals.push(deal);
+}

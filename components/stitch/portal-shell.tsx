@@ -62,13 +62,13 @@ export function PortalShell({
           })}
         </nav>
         <div className="mt-8 lg:absolute lg:bottom-8 lg:left-8 lg:right-8">
-          <button
-            type="button"
+          <Link
+            href="/admin/new-investment"
             className="portal-button w-full bg-[var(--color-primary)] text-white shadow-[0_22px_40px_rgba(15,26,36,0.22)] hover:bg-[var(--color-primary-soft)]"
           >
             <Icon name="add" className="h-4 w-4" />
             New Investment
-          </button>
+          </Link>
         </div>
       </aside>
       <div className="relative z-10">
